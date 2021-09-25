@@ -1,13 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-    public Vector2 InputDirection { get { return _inputDirection; } }
+    public float MovementDirection { get { return _movementDirection; } }
     public bool OnGround { get { return _onGround; } }
     public bool Jump { get { return _jump; } }
-    public Vector2 HookDirection { get { return _hookDirection; } }
 
     [SerializeField]
     float groundRadiusCheck = 0.01f;
@@ -16,11 +16,10 @@ public class PlayerInput : MonoBehaviour
     [SerializeField]
     float jumpDetectionTime = 0.1f;
 
-    Vector2 _inputDirection;
+    float _movementDirection;
     bool _onGround;
     bool _jump;
-    Vector2 _hookDirection;
-    bool _hookShot;
+    bool hookShot;
     SpriteRenderer spriteRenderer;
 
     private void Start()
@@ -32,14 +31,13 @@ public class PlayerInput : MonoBehaviour
     {
         bool screenHasTouch = Input.touchCount > 0;
 
-        // Input direction
+        // Movement direction
         float x = 0;
         if (screenHasTouch)
         {
             x = (Screen.currentResolution.width / 2 > Input.GetTouch(0).position.x) ? -1 : 1;
         }
-        _inputDirection.x = Input.GetAxis("Horizontal") + x;
-        _inputDirection.y = Input.GetAxis("Vertical");
+        _movementDirection = Input.GetAxis("Horizontal") + x;
 
         // Ground check
         Bounds spriteBounds = spriteRenderer.bounds;
@@ -51,20 +49,34 @@ public class PlayerInput : MonoBehaviour
         {
             jumpViaTouch = Input.GetTouch(0).deltaTime < jumpDetectionTime;
         }
-        _jump = _onGround && (Input.GetButton("Jump") || jumpViaTouch);
 
-        // Hook 
-        _hookDirection = Vector2.zero;
-        if (_onGround)
+        if (_onGround && (Input.GetButton("Jump") || jumpViaTouch))
         {
-            _hookShot = false;
+            GameEvents.PlayerJump?.Invoke();
         }
 
-        if (!_onGround && !_hookShot)
+        // Hook 
+        Vector2 hookDirection = Vector2.zero;
+
+        // Reactivate hook
+        if (_onGround)
         {
-            // TODO: get correct swipe direction
-            _hookShot = true;
-            _hookDirection.x = Input.GetAxis("Horizontal");
+            hookShot = false;
+        }
+
+        // Update hook shoot direction
+        if (!_onGround && !hookShot && (Input.GetButtonDown("Jump") || screenHasTouch))
+        {
+            hookShot = true;
+
+            hookDirection.x = Input.GetAxis("Horizontal") + (screenHasTouch ? Input.GetTouch(0).deltaPosition.x : 0);
+            hookDirection.y = Input.GetAxis("Vertical") + (screenHasTouch ? Input.GetTouch(0).deltaPosition.y : 0);
+
+            // Convert the range -2 ~ 2 to either -1, 0 or 1
+            hookDirection.x = Mathf.Floor(Mathf.InverseLerp(-2, 2, hookDirection.x) * 3 - 1);
+            hookDirection.y = Mathf.Floor(Mathf.InverseLerp(-2, 2, hookDirection.y) * 3 - 1);
+
+            GameEvents.PlayerShootsHook.Invoke(hookDirection);
         }
     }
 }
