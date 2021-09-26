@@ -5,6 +5,6 @@ using UnityEngine;
 
 public static class GameEvents
 {
-    public static Action<Vector2> PlayerShootsHook;
+    public static Action<float> PlayerShootsHook;
     public static Action PlayerJump;
 }
