@@ -7,7 +7,6 @@ public class PlayerInput : MonoBehaviour
 {
     public float MovementDirection { get { return _movementDirection; } }
     public bool OnGround { get { return _onGround; } }
-    public bool Jump { get { return _jump; } }
 
     [SerializeField]
     float groundRadiusCheck = 0.01f;
@@ -18,16 +17,15 @@ public class PlayerInput : MonoBehaviour
 
     float _movementDirection;
     bool _onGround;
-    bool _jump;
     bool hookShot;
     SpriteRenderer spriteRenderer;
 
-    private void Start()
+    void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    private void Update()
+    void Update()
     {
         bool screenHasTouch = Input.touchCount > 0;
 
@@ -35,7 +33,7 @@ public class PlayerInput : MonoBehaviour
         float x = 0;
         if (screenHasTouch)
         {
-            x = (Screen.currentResolution.width / 2 > Input.GetTouch(0).position.x) ? -1 : 1;
+            x = (Screen.width / 2 > Input.GetTouch(0).position.x) ? -1 : 1;
         }
         _movementDirection = Input.GetAxis("Horizontal") + x;
 
@@ -45,9 +43,9 @@ public class PlayerInput : MonoBehaviour
 
         // Jump input
         bool jumpViaTouch = false;
-        if (screenHasTouch)
+        if (Input.touchCount > 1)
         {
-            jumpViaTouch = Input.GetTouch(0).deltaTime < jumpDetectionTime;
+            jumpViaTouch = Input.GetTouch(1).phase == TouchPhase.Began;
         }
 
         if (_onGround && (Input.GetButton("Jump") || jumpViaTouch))
@@ -72,11 +70,22 @@ public class PlayerInput : MonoBehaviour
             hookDirection.x = Input.GetAxis("Horizontal") + (screenHasTouch ? Input.GetTouch(0).deltaPosition.x : 0);
             hookDirection.y = Input.GetAxis("Vertical") + (screenHasTouch ? Input.GetTouch(0).deltaPosition.y : 0);
 
-            // Convert the range -2 ~ 2 to either -1, 0 or 1
-            hookDirection.x = Mathf.Floor(Mathf.InverseLerp(-2, 2, hookDirection.x) * 3 - 1);
-            hookDirection.y = Mathf.Floor(Mathf.InverseLerp(-2, 2, hookDirection.y) * 3 - 1);
+            if (hookDirection.magnitude != 0)
+            {
+                // Convert the range -2 ~ 2 to either -1 or 1 on one of the axis (0 is filtered by the if statement)
+                if (Mathf.Abs(hookDirection.x) > Mathf.Abs(hookDirection.y))
+                {
+                    hookDirection.x = Mathf.Floor(Mathf.InverseLerp(-2, 2, hookDirection.x) * 3 - 1);
+                    hookDirection.y = 0;
+                }
+                else
+                {
+                    hookDirection.y = Mathf.Floor(Mathf.InverseLerp(-2, 2, hookDirection.y) * 3 - 1);
+                    hookDirection.x = 0;
+                }
 
-            GameEvents.PlayerShootsHook.Invoke(hookDirection);
+                GameEvents.PlayerShootsHook.Invoke(hookDirection);
+            }
         }
     }
 }

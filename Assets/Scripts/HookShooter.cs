@@ -15,26 +15,27 @@ public class HookShooter : MonoBehaviour
 
     Rigidbody2D rigidbody;
 
-    private void Start()
+    void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         GameEvents.PlayerShootsHook += HookShoot;
     }
 
-    private void HookShoot(Vector2 shootDirection)
+    void HookShoot(Vector2 shootDirection)
     {
-        rigidbody.velocity = Vector2.zero;
-        rigidbody.gravityScale = 0;
-        GameObject hook = Instantiate(hookPrefab, transform);
-
-        StartCoroutine(HookMovement(hook, shootDirection));
+        StartCoroutine(HookMovement(shootDirection));
     }
 
-    IEnumerator HookMovement(GameObject hook, Vector2 shootDirection)
+    IEnumerator HookMovement(Vector2 shootDirection)
     {
+        GameObject hook = Instantiate(hookPrefab, transform);
+
         RaycastHit2D hit = Physics2D.Raycast(hook.transform.position, shootDirection, maxShootDistance, shootableLayers);
         if (hit.collider)
         {
+            rigidbody.velocity = Vector2.zero;
+            rigidbody.gravityScale = 0;
+
             Debug.Log($"Hook hitted {hit.collider} at a distance of {hit.distance}. current distance is {Vector3.Distance(hook.transform.position + hook.transform.localScale, hit.collider.ClosestPoint(hook.transform.position))}");
             while (Vector3.Distance(hook.transform.position + hook.transform.localScale, hit.collider.ClosestPoint(hook.transform.position)) > hit.distance)
             {
