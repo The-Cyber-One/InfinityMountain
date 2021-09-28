@@ -5,6 +5,6 @@ using UnityEngine;
 
 public static class GameEvents
 {
-    public static Action<float> PlayerShootsHook;
-    public static Action PlayerJump;
+    public static Action<float> InputedShootHook;
+    public static Action InputedJump;
 }

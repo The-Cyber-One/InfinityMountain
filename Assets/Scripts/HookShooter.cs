@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,17 +18,31 @@ public class HookShooter : MonoBehaviour
 
     SpriteRenderer sprite;
     Rigidbody2D rigidbody;
+    float rechargeTime = 1.5f;
+    bool canShoot = true;
 
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
-        GameEvents.PlayerShootsHook += HookShoot;
+        GameEvents.InputedShootHook += HookShoot;
     }
 
     void HookShoot(float shootDirection)
     {
-        StartCoroutine(HookMovement(shootDirection));
+        if (canShoot)
+        {
+            // TODO: only start counting when player is of wall because player can climb easily higher with hook now
+            StartCoroutine(HookTimer());
+            StartCoroutine(HookMovement(shootDirection));
+        }
+    }
+
+    IEnumerator HookTimer()
+    {
+        canShoot = false;
+        yield return new WaitForSecondsRealtime(rechargeTime);
+        canShoot = true;
     }
 
     IEnumerator HookMovement(float shootDirection)
@@ -76,7 +91,9 @@ public class HookShooter : MonoBehaviour
             // Set position incase of overshooting
             transform.position = hit.point - (Vector2)offset;
 
-            rigidbody.gravityScale = 1;
+            playerInput.OnWall = true;
+            playerInput.wallSide = shootDirection;
+
             Destroy(hook);
         }
     }
