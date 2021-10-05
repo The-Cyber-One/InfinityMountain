@@ -42,9 +42,13 @@ public class PlayerInput : MonoBehaviour
     bool _hookShot = false;
     SpriteRenderer spriteRenderer;
 
+    Gyroscope gyro;
+
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        Screen.orientation = ScreenOrientation.Landscape;
+        Input.gyro.enabled = true;
     }
 
     void Update()
@@ -53,10 +57,17 @@ public class PlayerInput : MonoBehaviour
 
         // Movement direction
         float x = 0;
-        if (screenHasTouch)
+        //if (screenHasTouch)
+        //{
+        //    x = (Screen.width / 2 > Input.GetTouch(0).position.x) ? -1 : 1;
+        //}
+        Gyroscope gyro = null;
+        if (SystemInfo.supportsGyroscope)
         {
-            x = (Screen.width / 2 > Input.GetTouch(0).position.x) ? -1 : 1;
+            gyro = Input.gyro;
+            Debug.Log(gyro.userAcceleration);
         }
+
         // TODO: make ramp functinality
         MovementDirection = Input.GetAxis("Horizontal") + x;
 
@@ -66,9 +77,9 @@ public class PlayerInput : MonoBehaviour
 
         // Jump input
         bool jumpViaTouch = false;
-        if (Input.touchCount > 1)
+        if (screenHasTouch)
         {
-            jumpViaTouch = Input.GetTouch(1).phase == TouchPhase.Began;
+            jumpViaTouch = Input.GetTouch(0).phase == TouchPhase.Began;
         }
 
         if (Input.GetButtonDown("Jump") || jumpViaTouch)
