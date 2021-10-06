@@ -37,17 +37,20 @@ public class PlayerInput : MonoBehaviour
     float jumpDetectionTime = 0.3f;
     [SerializeField]
     float minSwipeMovement = 50f;
+    [SerializeField]
+    [Range(0,1)]
+    float rotationIntensity = 0.3f;
     bool _onWall = false;
     bool _onGround = false;
     bool _hookShot = false;
     SpriteRenderer spriteRenderer;
 
     Gyroscope gyro;
+    float xVelocity;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        Screen.orientation = ScreenOrientation.Landscape;
         Input.gyro.enabled = true;
     }
 
@@ -56,20 +59,17 @@ public class PlayerInput : MonoBehaviour
         bool screenHasTouch = Input.touchCount > 0;
 
         // Movement direction
-        float x = 0;
-        //if (screenHasTouch)
-        //{
-        //    x = (Screen.width / 2 > Input.GetTouch(0).position.x) ? -1 : 1;
-        //}
         Gyroscope gyro = null;
         if (SystemInfo.supportsGyroscope)
         {
             gyro = Input.gyro;
-            Debug.Log(gyro.userAcceleration);
+
+            xVelocity = Mathf.InverseLerp(0, 360, gyro.attitude.eulerAngles.z);
+            Debug.Log(xVelocity);
         }
 
         // TODO: make ramp functinality
-        MovementDirection = Input.GetAxis("Horizontal") + x;
+        MovementDirection = Input.GetAxis("Horizontal") + xVelocity;
 
         // Ground check
         Bounds spriteBounds = spriteRenderer.bounds;
