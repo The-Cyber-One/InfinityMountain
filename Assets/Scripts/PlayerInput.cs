@@ -7,7 +7,8 @@ public class PlayerInput : MonoBehaviour
 {
     public float wallSide = 0;
     public bool canJump = false;
-
+    public bool hookShot;
+    public float MovementDirection { get; private set; } = 0;
     public bool OnWall
     {
         get { return _onWall; }
@@ -17,7 +18,7 @@ public class PlayerInput : MonoBehaviour
             if (value) canJump = true;
         }
     }
-    public bool OnGround
+    public bool ContactWithGround
     {
         get { return _onGround; }
         private set
@@ -26,83 +27,57 @@ public class PlayerInput : MonoBehaviour
             if (value) canJump = true;
         }
     }
-    public bool HookShot { private get { return _hookShot; } set { _hookShot = value; } }
-    public float MovementDirection { get; private set; } = 0;
 
     [SerializeField]
-    float groundCheckDistance = 0.01f;
-    [SerializeField]
-    LayerMask groundLayer;
-    [SerializeField]
-    float jumpDetectionTime = 0.3f;
-    [SerializeField]
-    float minSwipeMovement = 50f;
-    [SerializeField]
-    [Range(0,1)]
-    float rotationIntensity = 0.3f;
+    [Range(0, 180)]
+    float minRotation = 5, maxRotation = 30;
+
     bool _onWall = false;
     bool _onGround = false;
-    bool _hookShot = false;
-    SpriteRenderer spriteRenderer;
+    float mobileVelocity;
 
-    Gyroscope gyro;
-    float xVelocity;
-
-    void Start()
+    bool ScreenHasTouch { get { return Input.touchCount > 0; } }
+    bool ScreenClicked
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        Input.gyro.enabled = true;
+        get
+        {
+            if (!ScreenHasTouch) return false;
+            return Input.GetTouch(0).phase == TouchPhase.Began;
+        }
     }
 
     void Update()
     {
-        bool screenHasTouch = Input.touchCount > 0;
+        // Reactivate hook
+        if (ContactWithGround)
+        {
+            hookShot = false;
+        }
 
         // Movement direction
-        Gyroscope gyro = null;
-        if (SystemInfo.supportsGyroscope)
-        {
-            gyro = Input.gyro;
+        bool rotateRight = Input.acceleration.x < 0;
+        mobileVelocity = Mathf.InverseLerp(minRotation / 180, maxRotation / 180, Mathf.Abs(Input.acceleration.x));
+        if (rotateRight) mobileVelocity *= -1;
 
-            xVelocity = Mathf.InverseLerp(0, 360, gyro.attitude.eulerAngles.z);
-            Debug.Log(xVelocity);
-        }
-
-        // TODO: make ramp functinality
-        MovementDirection = Input.GetAxis("Horizontal") + xVelocity;
-
-        // Ground check
-        Bounds spriteBounds = spriteRenderer.bounds;
-        OnGround = Physics2D.BoxCast(new Vector2(spriteBounds.center.x, spriteBounds.min.y - groundCheckDistance / 2), new Vector2(spriteBounds.size.x, groundCheckDistance), 0, Vector2.down, groundCheckDistance, groundLayer);
+        MovementDirection = Input.GetAxis("Horizontal") + mobileVelocity;
 
         // Jump input
-        bool jumpViaTouch = false;
-        if (screenHasTouch)
-        {
-            jumpViaTouch = Input.GetTouch(0).phase == TouchPhase.Began;
-        }
-
-        if (Input.GetButtonDown("Jump") || jumpViaTouch)
+        if ((ContactWithGround || OnWall) && (Input.GetButtonDown("Jump") || ScreenClicked))
         {
             GameEvents.InputedJump?.Invoke();
             wallSide = 0;
             OnWall = false;
-            HookShot = false;
-        }
-
-        // Reactivate hook
-        if (OnGround)
-        {
-            HookShot = false;
+            hookShot = false;
         }
 
         // Update hook shoot direction
-        if (!OnGround && !HookShot && (Input.GetButtonDown("Jump") || screenHasTouch))
+        if (!ContactWithGround && !hookShot && (Input.GetButtonDown("Jump") || ScreenClicked))
         {
             float hookDirection = Input.GetAxis("Horizontal");
-            if (screenHasTouch)
+            if (ScreenHasTouch)
             {
-                hookDirection += (Mathf.Abs(Input.GetTouch(0).deltaPosition.x) > minSwipeMovement ? Input.GetTouch(0).deltaPosition.x : 0);
+                hookDirection += Input.GetTouch(0).position.x > Screen.width / 2 ? 1 : -1;
+                Debug.Log($"{Screen.width} < {Input.GetTouch(0).position.x} = {hookDirection}");
             }
 
             if (hookDirection != 0)
@@ -114,6 +89,4 @@ public class PlayerInput : MonoBehaviour
             }
         }
     }
-
-
 }

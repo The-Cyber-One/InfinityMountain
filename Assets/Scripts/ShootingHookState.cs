@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HookShooter : MonoBehaviour
+public class ShootingHookState : State
 {
     [SerializeField]
     PlayerInput playerInput;
@@ -15,11 +15,16 @@ public class HookShooter : MonoBehaviour
     float maxShootDistance = 10f;
     [SerializeField]
     LayerMask shootableLayers;
+    [SerializeField]
+    float rechargeTime = 1.5f;
 
     SpriteRenderer sprite;
     Rigidbody2D rigidbody;
-    float rechargeTime = 1.5f;
     bool canShoot = true;
+
+    public override void Enter() { }
+
+    public override void Exit() { }
 
     void Start()
     {
@@ -53,14 +58,14 @@ public class HookShooter : MonoBehaviour
 
         if (hit.collider)
         {
-            playerInput.HookShot = true;
+            playerInput.hookShot = true;
 
             // Instantiate hook prefab
             GameObject hook = Instantiate(hookPrefab, transform.position + offset, Quaternion.identity, transform);
 
             // Stop player movement
             rigidbody.velocity = Vector2.zero;
-            rigidbody.gravityScale = 0;
+            rigidbody.isKinematic = true;
 
             // Shoot hook
             float neededMagnitude = (hit.point - (Vector2)hook.transform.position).magnitude;
@@ -97,4 +102,5 @@ public class HookShooter : MonoBehaviour
             Destroy(hook);
         }
     }
+
 }
