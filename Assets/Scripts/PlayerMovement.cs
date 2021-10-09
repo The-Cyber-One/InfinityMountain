@@ -15,19 +15,22 @@ public class PlayerMovement : StateMachine
         ShootingHook,
         OnWall
     }
-    public StateOptions currentState = StateOptions.OnGround;
-
     public Rigidbody2D rigidbody;
+    public SpriteRenderer spriteRenderer;
     public PlayerInput playerInput;
+    public PlayerMovement context;
 
     private void Start()
     {
+        context = this;
+
         states.Add((int)StateOptions.OnGround, GetComponent<PlayerOnGroundState>());
         states.Add((int)StateOptions.InAir, GetComponent<PlayerInAirState>());
         states.Add((int)StateOptions.ShootingHook, GetComponent<ShootingHookState>());
         states.Add((int)StateOptions.OnWall, GetComponent<PlayerOnWallState>());
 
         rigidbody = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         playerInput = GetComponent<PlayerInput>();
 
         StateMachineSetup((int)StateOptions.OnGround);

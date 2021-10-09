@@ -1,8 +1,9 @@
+using System;
 using UnityEngine;
 
 public abstract class State : MonoBehaviour
 {
-    protected StateMachine context;
+    protected StateMachine context { get; private set; }
 
     /// <summary>
     /// Sets the statemachine context to this state
@@ -11,6 +12,11 @@ public abstract class State : MonoBehaviour
     public void SetContext(StateMachine context)
     {
         this.context = context;
+    }
+
+    public T GetContext<T>()
+    {
+        return (T)Convert.ChangeType(context, typeof(T));
     }
 
     /// <summary>

@@ -13,29 +13,32 @@ public class PlayerOnWallState : State
     [SerializeField]
     float sideWallJumpDistance = 2f;
 
-    void Start()
+    public override void Enter()
     {
         GameEvents.InputedJump += Jump;
     }
 
-    public override void Enter()
+    public override void Exit()
     {
-
+        GameEvents.InputedJump -= Jump;
+        GetContext<PlayerMovement>().rigidbody.gravityScale = 1;
     }
-
-    public override void Exit() { }
 
     public void Jump()
     {
-        PlayerMovement playerMovement = context as PlayerMovement;
         // Check if player wants to jump away from wall
-        if ((playerMovement.playerInput.MovementDirection > 0 && playerMovement.playerInput.wallSide < 0) || (playerMovement.playerInput.MovementDirection < 0 && playerMovement.playerInput.wallSide > 0))
+        if ((GetContext<PlayerMovement>().playerInput.HookDirection > 0 && GetContext<PlayerMovement>().playerInput.wallSide < 0) || (GetContext<PlayerMovement>().playerInput.HookDirection < 0 && GetContext<PlayerMovement>().playerInput.wallSide > 0))
         {
-            playerMovement.rigidbody.velocity = Vector2.up * Mathf.Sqrt(sideWallJumpHeight * -3.0f * Physics.gravity.y) + -playerMovement.playerInput.wallSide * sideWallJumpDistance * Vector2.right;
+            // Jump away
+            GetContext<PlayerMovement>().rigidbody.velocity = Vector2.up * Mathf.Sqrt(sideWallJumpHeight * -3.0f * Physics.gravity.y) + -GetContext<PlayerMovement>().playerInput.wallSide * sideWallJumpDistance * Vector2.right;
         }
         else
         {
-            playerMovement.rigidbody.velocity = Vector2.up * Mathf.Sqrt(upWallJumpHeight * -3.0f * Physics.gravity.y) + -playerMovement.playerInput.wallSide * upWallJumpDistance * Vector2.right;
+            // Jump up
+            GetContext<PlayerMovement>().rigidbody.velocity = Vector2.up * Mathf.Sqrt(upWallJumpHeight * -3.0f * Physics.gravity.y) + -GetContext<PlayerMovement>().playerInput.wallSide * upWallJumpDistance * Vector2.right;
         }
+
+        GetContext<PlayerMovement>().playerInput.wallSide = 0;
+        context.TransitionTo((int)PlayerMovement.StateOptions.InAir);
     }
 }
