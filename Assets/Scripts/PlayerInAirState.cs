@@ -8,6 +8,7 @@ public class PlayerInAirState : State
     public override void Enter()
     {
         GameEvents.InputedJump += ShootHook;
+        GetContext<PlayerMovement>().rigidbody.gravityScale = 1;
     }
 
     public override void Exit()

@@ -12,6 +12,7 @@ public class PlayerOnGroundState : State
     public override void Enter()
     {
         GameEvents.InputedJump += Jump;
+        GetContext<PlayerMovement>().rigidbody.gravityScale = 1;
         GetContext<PlayerMovement>().playerInput.hookShot = false;
     }
 

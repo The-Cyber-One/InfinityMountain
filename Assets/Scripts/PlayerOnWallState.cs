@@ -21,7 +21,6 @@ public class PlayerOnWallState : State
     public override void Exit()
     {
         GameEvents.InputedJump -= Jump;
-        GetContext<PlayerMovement>().rigidbody.gravityScale = 1;
     }
 
     public void Jump()

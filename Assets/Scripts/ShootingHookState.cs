@@ -13,6 +13,8 @@ public class ShootingHookState : State
     float maxShootDistance = 10f;
     [SerializeField]
     LayerMask shootableLayers;
+    [SerializeField]
+    string[] breakableTags;
 
     bool canShoot = true;
     Coroutine coroutine;
@@ -96,7 +98,15 @@ public class ShootingHookState : State
         GetContext<PlayerMovement>().playerInput.wallSide = shootDirection;
 
         Destroy(hook);
-
+        for (int i = 0; i < breakableTags.Length; i++)
+        {
+            if (breakableTags[i] == hit.transform.tag)
+            {
+                Destroy(hit.transform.gameObject);
+                GetContext<PlayerMovement>().TransitionTo((int)PlayerMovement.StateOptions.InAir);
+                yield break;
+            }
+        }
         GetContext<PlayerMovement>().TransitionTo((int)PlayerMovement.StateOptions.OnWall);
 
     }
