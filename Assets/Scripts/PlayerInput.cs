@@ -5,8 +5,11 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
+    [HideInInspector]
     public float wallSide = 0;
+    [HideInInspector]
     public bool onWall;
+    [HideInInspector]
     public bool hookShot;
     public float MovementDirection { get; private set; } = 0;
     public float HookDirection { get; private set; } = 0;
