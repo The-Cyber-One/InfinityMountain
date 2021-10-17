@@ -8,9 +8,6 @@ public class PlayerOnGroundState : State
     float speed = 1f;
     [SerializeField]
     float jumpHeight = 2f;
-    [SerializeField]
-    float slopePrecision = 0.80f;
-    bool onSlope;
 
     public override void Enter()
     {
@@ -31,15 +28,9 @@ public class PlayerOnGroundState : State
         GetContext<PlayerMovement>().rigidbody.velocity = vector;
 
         // Transition Checks
-        if (!GetContext<PlayerMovement>().OnGround || onSlope) context.TransitionTo((int)PlayerMovement.StateOptions.InAir);
+        if (!GetContext<PlayerMovement>().OnGround || GetContext<PlayerMovement>().OnSlope) context.TransitionTo((int)PlayerMovement.StateOptions.InAir);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        float dot = Vector2.Dot(collision.GetContact(0).normal, Vector2.up);
-        onSlope = dot < slopePrecision;
-        Debug.Log(dot);
-    }
 
     private void Jump()
     {

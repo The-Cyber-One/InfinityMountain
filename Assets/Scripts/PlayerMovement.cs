@@ -29,11 +29,15 @@ public class PlayerMovement : StateMachine
                 Vector2.down, groundCheckDistance, groundLayer);
         }
     }
+    public bool OnSlope { get; private set; }
 
     [SerializeField]
     float groundCheckDistance = 0.01f;
     [SerializeField]
     LayerMask groundLayer;
+    [SerializeField]
+    float slopePrecision = 0.80f;
+
 
     private void Start()
     {
@@ -49,5 +53,10 @@ public class PlayerMovement : StateMachine
         StateMachineSetup((int)StateOptions.OnGround);
     }
 
-
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        float dot = Vector2.Dot(collision.GetContact(0).normal, Vector2.up);
+        OnSlope = dot < slopePrecision;
+        Debug.Log(dot);
+    }
 }
