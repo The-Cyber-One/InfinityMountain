@@ -14,6 +14,10 @@ public class ShootingHookState : State
     [SerializeField]
     LayerMask shootableLayers;
     [SerializeField]
+    [TagSelector]
+    string hookableTag;
+    [SerializeField]
+    [TagSelector]
     string[] breakableTags;
 
     bool canShoot = true;
@@ -49,7 +53,7 @@ public class ShootingHookState : State
         Vector3 offset = Vector3.right * (GetContext<PlayerMovement>().spriteRenderer.bounds.size.x / 2 * shootDirection);
         RaycastHit2D hit = Physics2D.Raycast(transform.position + offset, shootDirection * Vector2.right, maxShootDistance, shootableLayers);
 
-        if (!hit.collider)
+        if (!hit.collider || !hit.transform.CompareTag(hookableTag))
         {
             context.TransitionTo((int)PlayerMovement.StateOptions.InAir);
             yield break;

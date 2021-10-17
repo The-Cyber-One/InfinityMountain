@@ -13,28 +13,11 @@ public class PlayerInput : MonoBehaviour
     public bool hookShot;
     public float MovementDirection { get; private set; } = 0;
     public float HookDirection { get; private set; } = 0;
-    public bool OnGround
-    {
-        get
-        {
-            return Physics2D.BoxCast(
-                new Vector2(spriteRenderer.bounds.center.x, spriteRenderer.bounds.min.y - groundCheckDistance / 2),
-                new Vector2(spriteRenderer.bounds.size.x - 0.1f, groundCheckDistance),
-                0,
-                Vector2.down, groundCheckDistance, groundLayer);
-        }
-    }
 
     [SerializeField]
     [Range(0, 180)]
     float minRotation = 5, maxRotation = 30;
-    [SerializeField]
-    float groundCheckDistance = 0.01f;
-    [SerializeField]
-    LayerMask groundLayer;
-
     float mobileVelocity;
-    SpriteRenderer spriteRenderer;
 
     public bool ScreenHasTouch { get { return Input.touchCount > 0; } }
     bool ScreenClicked
@@ -44,11 +27,6 @@ public class PlayerInput : MonoBehaviour
             if (!ScreenHasTouch) return false;
             return Input.GetTouch(0).phase == TouchPhase.Began;
         }
-    }
-
-    void Start()
-    {
-        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()

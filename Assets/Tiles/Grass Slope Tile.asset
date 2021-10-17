@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68d1fc3a14996054399ccbd4c70a9c17, type: 3}
   m_Name: Grass Slope Tile
   m_EditorClassIdentifier: Assembly-CSharp-Editor::SiblingRuleTile
-  m_DefaultSprite: {fileID: 0}
+  m_DefaultSprite: {fileID: -2551688450812798196, guid: 8490979f53baa864f9313eb04329a1ba, type: 3}
   m_DefaultGameObject: {fileID: 0}
   m_DefaultColliderType: 1
   m_TilingRules:

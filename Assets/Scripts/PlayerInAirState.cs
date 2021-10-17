@@ -19,7 +19,7 @@ public class PlayerInAirState : State
     void Update()
     {
         // Transition checks
-        if (GetContext<PlayerMovement>().playerInput.OnGround) 
+        if (GetContext<PlayerMovement>().OnGround) 
             context.TransitionTo((int)PlayerMovement.StateOptions.OnGround);
     }
 

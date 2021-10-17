@@ -15,15 +15,28 @@ public class PlayerMovement : StateMachine
         ShootingHook,
         OnWall
     }
+    public PlayerInput playerInput;
     public Rigidbody2D rigidbody;
     public SpriteRenderer spriteRenderer;
-    public PlayerInput playerInput;
-    public PlayerMovement context;
+    public bool OnGround
+    {
+        get
+        {
+            return Physics2D.BoxCast(
+                new Vector2(spriteRenderer.bounds.center.x, spriteRenderer.bounds.min.y - groundCheckDistance / 2),
+                new Vector2(spriteRenderer.bounds.size.x - 0.1f, groundCheckDistance),
+                0,
+                Vector2.down, groundCheckDistance, groundLayer);
+        }
+    }
+
+    [SerializeField]
+    float groundCheckDistance = 0.01f;
+    [SerializeField]
+    LayerMask groundLayer;
 
     private void Start()
     {
-        context = this;
-
         states.Add((int)StateOptions.OnGround, GetComponent<PlayerOnGroundState>());
         states.Add((int)StateOptions.InAir, GetComponent<PlayerInAirState>());
         states.Add((int)StateOptions.ShootingHook, GetComponent<ShootingHookState>());
@@ -35,4 +48,6 @@ public class PlayerMovement : StateMachine
 
         StateMachineSetup((int)StateOptions.OnGround);
     }
+
+
 }
