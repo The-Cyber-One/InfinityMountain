@@ -25,7 +25,7 @@ public class PlayerInAirState : State
 
     void ShootHook()
     {
-        if (!GetContext<PlayerMovement>().playerInput.hookShot)
+        if (GetContext<PlayerMovement>().hookData.CanShootHook())
             context.TransitionTo((int)PlayerMovement.StateOptions.ShootingHook);
     }
 }

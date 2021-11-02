@@ -13,7 +13,6 @@ public class PlayerOnGroundState : State
     {
         GameEvents.InputedJump += Jump;
         GetContext<PlayerMovement>().rigidbody.gravityScale = 1;
-        GetContext<PlayerMovement>().playerInput.hookShot = false;
     }
 
     public override void Exit()

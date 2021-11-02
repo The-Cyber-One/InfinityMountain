@@ -16,6 +16,7 @@ public class PlayerMovement : StateMachine
         OnWall
     }
     public PlayerInput playerInput;
+    public HookData hookData;
     public Rigidbody2D rigidbody;
     public SpriteRenderer spriteRenderer;
     public bool OnGround
@@ -46,15 +47,12 @@ public class PlayerMovement : StateMachine
         states.Add((int)StateOptions.ShootingHook, GetComponent<ShootingHookState>());
         states.Add((int)StateOptions.OnWall, GetComponent<PlayerOnWallState>());
 
-        rigidbody = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        playerInput = GetComponent<PlayerInput>();
-
         StateMachineSetup((int)StateOptions.OnGround);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if (!OnGround) return;
         float dot = Vector2.Dot(collision.GetContact(0).normal, Vector2.up);
         OnSlope = dot < slopePrecision;
         Debug.Log(dot);

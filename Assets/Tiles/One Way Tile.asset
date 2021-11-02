@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68d1fc3a14996054399ccbd4c70a9c17, type: 3}
+  m_Name: One Way Tile
+  m_EditorClassIdentifier: 
+  m_DefaultSprite: {fileID: 0}
+  m_DefaultGameObject: {fileID: 2726402112827983834, guid: fcc624bec9c0b7c41a018fda62d875b4, type: 3}
+  m_DefaultColliderType: 1
+  m_TilingRules: []
+  siblings:
+  - {fileID: 11400000, guid: 0160988ce92fb10419a483301fa7a1e7, type: 2}
+  - {fileID: 11400000, guid: a08c7ab67aa7adf4daa54782842f1de9, type: 2}

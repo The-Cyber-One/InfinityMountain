@@ -20,18 +20,11 @@ public class ShootingHookState : State
     [TagSelector]
     string[] breakableTags;
 
-    bool canShoot = true;
     Coroutine coroutine;
     GameObject hook;
 
     public override void Enter()
     {
-        if (!canShoot)
-        {
-            context.TransitionTo((int)PlayerMovement.StateOptions.InAir);
-            return;
-        }
-
         coroutine = StartCoroutine(HookMovement(GetContext<PlayerMovement>().playerInput.HookDirection));
     }
 
@@ -59,8 +52,7 @@ public class ShootingHookState : State
             yield break;
         }
 
-        //StartCoroutine(HookTimer());
-        GetContext<PlayerMovement>().playerInput.hookShot = true;
+        GetContext<PlayerMovement>().hookData.UseHook();
 
         // Instantiate hook prefab
         hook = Instantiate(hookPrefab, transform.position + offset, Quaternion.identity, transform);
