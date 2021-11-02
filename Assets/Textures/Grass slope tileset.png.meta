@@ -1,295 +1,151 @@
 fileFormatVersion: 2
-guid: 8490979f53baa864f9313eb04329a1ba
+guid: 09353c2e6f655e943929d73e6a0f0363
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3137207735034164392
-    second: Grass tileset_0
+      213: -3477398085326057839
+    second: Grass slope tileset_0
   - first:
-      213: -1375476024320181484
-    second: Grass tileset_1
+      213: 6248633949713767819
+    second: Grass slope tileset_1
   - first:
-      213: -2301110662943846150
-    second: Grass tileset_2
+      213: 418647039718336036
+    second: Grass slope tileset_2
   - first:
-      213: -1750081269706966058
-    second: Grass tileset_3
+      213: 4986411405177186381
+    second: Grass slope tileset_3
   - first:
-      213: 8587434918363645731
-    second: Grass tileset_4
+      213: 3619757288198202466
+    second: Grass slope tileset_4
   - first:
-      213: 4300288016400186617
-    second: Grass tileset_5
+      213: -7491118232550380426
+    second: Grass slope tileset_5
   - first:
-      213: 8073139346294864079
-    second: Grass tileset_6
+      213: 2246575798279308412
+    second: Grass slope tileset_6
   - first:
-      213: -2175151822308475415
-    second: Grass tileset_7
+      213: -1920676507195736874
+    second: Grass slope tileset_7
   - first:
-      213: 4019834971190444199
-    second: Grass tileset_8
+      213: 1892071222625585945
+    second: Grass slope tileset_8
   - first:
-      213: -1675081826720578906
-    second: Grass tileset_9
+      213: 1392075369358214510
+    second: Grass slope tileset_9
   - first:
-      213: 2574522525593723407
-    second: Grass tileset_10
+      213: 1177623777985928983
+    second: Grass slope tileset_10
   - first:
-      213: 8622524500934580112
-    second: Grass tileset_11
+      213: 1721720936021067857
+    second: Grass slope tileset_11
   - first:
-      213: 8869337125779239697
-    second: Grass tileset_12
+      213: -4264348172421730429
+    second: Grass slope tileset_12
   - first:
-      213: 7622529117549042219
-    second: Grass tileset_13
+      213: -1785270821102974152
+    second: Grass slope tileset_13
   - first:
-      213: 1788098958018867061
-    second: Grass tileset_14
+      213: -5189650406495239008
+    second: Grass slope tileset_14
   - first:
-      213: -647847482044773584
-    second: Grass tileset_15
+      213: -6484297422029792747
+    second: Grass slope tileset_15
   - first:
-      213: -4761823303600916101
-    second: Grass tileset_16
+      213: -5163422925232636897
+    second: Grass slope tileset_16
   - first:
-      213: -8629365322255841521
-    second: Grass tileset_17
+      213: 3770952918029538853
+    second: Grass slope tileset_17
   - first:
-      213: 8502824935417974849
-    second: Grass tileset_18
+      213: 410947669540971356
+    second: Grass slope tileset_18
   - first:
-      213: -1923769179109906247
-    second: Grass tileset_19
+      213: 5489838026931702294
+    second: Grass slope tileset_19
   - first:
-      213: -6505564968582057185
-    second: Grass tileset_20
+      213: 4661827067596890854
+    second: Grass slope tileset_20
   - first:
-      213: 3274271345144322704
-    second: Grass tileset_21
+      213: -3556038265326016579
+    second: Grass slope tileset_21
   - first:
-      213: 8040745574215364059
-    second: Grass tileset_22
+      213: 3438565274697532263
+    second: Grass slope tileset_22
   - first:
-      213: -4913636876017575594
-    second: Grass tileset_23
+      213: -1707913144449419799
+    second: Grass slope tileset_23
   - first:
-      213: -3424636387110129542
-    second: Grass tileset_24
+      213: -2740332060045221867
+    second: Grass slope tileset_24
   - first:
-      213: 664211543999139919
-    second: Grass tileset_25
+      213: 5073901686054876411
+    second: Grass slope tileset_25
   - first:
-      213: 2436835828024421573
-    second: Grass tileset_26
+      213: 1157615591527250613
+    second: Grass slope tileset_26
   - first:
-      213: 1733283370728409214
-    second: Grass tileset_27
+      213: 523433064238032322
+    second: Grass slope tileset_27
   - first:
-      213: 7234578159615294892
-    second: Grass tileset_28
+      213: 5161294313353757820
+    second: Grass slope tileset_28
   - first:
-      213: -6115113625244538213
-    second: Grass tileset_29
+      213: 8451041181668287997
+    second: Grass slope tileset_29
   - first:
-      213: -4695507295731513608
-    second: Grass tileset_30
+      213: 3478061500062758952
+    second: Grass slope tileset_30
   - first:
-      213: -2962428539882775852
-    second: Grass tileset_31
+      213: 6218865600078810993
+    second: Grass slope tileset_31
   - first:
-      213: 3892814436014530613
-    second: Grass tileset_32
+      213: -4284115820607760286
+    second: Grass slope tileset_32
   - first:
-      213: 943498170987343473
-    second: Grass tileset_33
+      213: 8063011805118359098
+    second: Grass slope tileset_33
   - first:
-      213: -1520281961657039162
-    second: Grass tileset_34
+      213: -1467985011413134173
+    second: Grass slope tileset_34
   - first:
-      213: 2926733931812483162
-    second: Grass tileset_35
+      213: -6856995173511797977
+    second: Grass slope tileset_35
   - first:
-      213: -3728206578306740275
-    second: Grass tileset_36
+      213: 6516439067690408497
+    second: Grass slope tileset_36
   - first:
-      213: 7418262461028333224
-    second: Grass tileset_37
+      213: -8047509501609786487
+    second: Grass slope tileset_37
   - first:
-      213: 8106176899951867770
-    second: Grass tileset_38
+      213: 9115555029936091744
+    second: Grass slope tileset_38
   - first:
-      213: 4554393461475573339
-    second: Grass tileset_39
+      213: -7338201651084552469
+    second: Grass slope tileset_39
   - first:
-      213: -3291047973735433188
-    second: Grass tileset_40
+      213: 691368487146543194
+    second: Grass slope tileset_40
   - first:
-      213: 792877432731472132
-    second: Grass tileset_41
+      213: 2706590757490464137
+    second: Grass slope tileset_41
   - first:
-      213: -8311816756074833836
-    second: Grass tileset_42
+      213: -8768864603230205687
+    second: Grass slope tileset_42
   - first:
-      213: 9174079039725272903
-    second: Grass tileset_43
+      213: 3701020867662040522
+    second: Grass slope tileset_43
   - first:
-      213: 3714765139127267196
-    second: Grass tileset_44
+      213: 6905190647232409648
+    second: Grass slope tileset_44
   - first:
-      213: 4255390807972099653
-    second: Grass tileset_45
+      213: 4368280934769335527
+    second: Grass slope tileset_45
   - first:
-      213: 5920123387737154129
-    second: Grass tileset_46
+      213: -8247275526147739240
+    second: Grass slope tileset_46
   - first:
-      213: -8203593432160621097
-    second: Grass tileset_47
-  - first:
-      213: 4163940195701453184
-    second: Grass tileset_48
-  - first:
-      213: 4722653691997872020
-    second: Grass tileset_49
-  - first:
-      213: 2876020085755770453
-    second: Grass tileset_50
-  - first:
-      213: 1703824483096523570
-    second: Grass tileset_51
-  - first:
-      213: -1846976033092370032
-    second: Grass tileset_52
-  - first:
-      213: 4425107687661395696
-    second: Grass tileset_53
-  - first:
-      213: -9141681443169198537
-    second: Grass tileset_54
-  - first:
-      213: -2643941685982850354
-    second: Grass tileset_55
-  - first:
-      213: -7615026536228358010
-    second: Grass tileset_56
-  - first:
-      213: -1419334115432290499
-    second: Grass tileset_57
-  - first:
-      213: 2949382824770355388
-    second: Grass tileset_58
-  - first:
-      213: 998643015697290250
-    second: Grass tileset_59
-  - first:
-      213: 1307487203344247312
-    second: Grass tileset_60
-  - first:
-      213: -2190548405191777794
-    second: Grass tileset_61
-  - first:
-      213: 7542946608162845492
-    second: Grass tileset_62
-  - first:
-      213: -7496635214054317870
-    second: Grass tileset_63
-  - first:
-      213: -2656574015593503363
-    second: Grass tileset_64
-  - first:
-      213: 8629629039422762490
-    second: Grass tileset_65
-  - first:
-      213: 193899842196172097
-    second: Grass tileset_66
-  - first:
-      213: 9117023696213939863
-    second: Grass tileset_67
-  - first:
-      213: -3807377796337203323
-    second: Grass tileset_68
-  - first:
-      213: 8121403677002167077
-    second: Grass tileset_69
-  - first:
-      213: 1961774720179538349
-    second: Grass tileset_70
-  - first:
-      213: 2198173758251129298
-    second: Grass tileset_71
-  - first:
-      213: -2551688450812798196
-    second: Grass tileset_72
-  - first:
-      213: 7270011202759694021
-    second: Grass tileset_73
-  - first:
-      213: -5667402425163046258
-    second: Grass tileset_74
-  - first:
-      213: -3754786801200175118
-    second: Grass tileset_75
-  - first:
-      213: -9102042140180564586
-    second: Grass tileset_76
-  - first:
-      213: 2624020017738701659
-    second: Grass tileset_77
-  - first:
-      213: 1434627858809138846
-    second: Grass tileset_78
-  - first:
-      213: 5317411371724407395
-    second: Grass tileset_79
-  - first:
-      213: -144796600675107361
-    second: Grass tileset_80
-  - first:
-      213: 4789379629187526404
-    second: Grass tileset_81
-  - first:
-      213: 3965763294991898504
-    second: Grass tileset_82
-  - first:
-      213: -4191582939583852475
-    second: Grass tileset_83
-  - first:
-      213: -4804187557611131199
-    second: Grass tileset_84
-  - first:
-      213: 9080785643994012989
-    second: Grass tileset_85
-  - first:
-      213: 2620502964479136829
-    second: Grass tileset_86
-  - first:
-      213: -6194924218623670686
-    second: Grass tileset_87
-  - first:
-      213: -5709570206641495811
-    second: Grass tileset_88
-  - first:
-      213: 3951706944444579167
-    second: Grass tileset_89
-  - first:
-      213: 801893714795644324
-    second: Grass tileset_90
-  - first:
-      213: 307119691655010959
-    second: Grass tileset_91
-  - first:
-      213: -8329179584230780072
-    second: Grass tileset_92
-  - first:
-      213: 5712846000438531601
-    second: Grass tileset_93
-  - first:
-      213: 9155110058201386916
-    second: Grass tileset_94
-  - first:
-      213: 6055411680640210198
-    second: Grass tileset_95
+      213: -7747190124082871706
+    second: Grass slope tileset_47
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -353,7 +209,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 512
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -365,7 +221,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 512
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -377,7 +233,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 512
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -391,7 +247,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grass tileset_0
+      name: Grass slope tileset_0
       rect:
         serializedVersion: 2
         x: 0
@@ -405,14 +261,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85b4ea6cf266674d0800000000000000
-      internalID: -3137207735034164392
+      spriteID: 19e448d8ddccdbfc0800000000000000
+      internalID: -3477398085326057839
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_1
+      name: Grass slope tileset_1
       rect:
         serializedVersion: 2
         x: 32
@@ -426,14 +282,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41b345de7d359ece0800000000000000
-      internalID: -1375476024320181484
+      spriteID: b8d9228787b97b650800000000000000
+      internalID: 6248633949713767819
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_2
+      name: Grass slope tileset_2
       rect:
         serializedVersion: 2
         x: 64
@@ -447,14 +303,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af05e5a3b00d010e0800000000000000
-      internalID: -2301110662943846150
+      spriteID: 4262ea8b3455fc500800000000000000
+      internalID: 418647039718336036
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_3
+      name: Grass slope tileset_3
       rect:
         serializedVersion: 2
         x: 96
@@ -468,14 +324,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6db3d078b5676b7e0800000000000000
-      internalID: -1750081269706966058
+      spriteID: d48ea8df0ca433540800000000000000
+      internalID: 4986411405177186381
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_4
+      name: Grass slope tileset_4
       rect:
         serializedVersion: 2
         x: 128
@@ -489,14 +345,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 327c9d06f82bc2770800000000000000
-      internalID: 8587434918363645731
+      spriteID: 2646f284316fb3230800000000000000
+      internalID: 3619757288198202466
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_5
+      name: Grass slope tileset_5
       rect:
         serializedVersion: 2
         x: 160
@@ -510,14 +366,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fcf661ca21bdab30800000000000000
-      internalID: 4300288016400186617
+      spriteID: 67ce16a38a33a0890800000000000000
+      internalID: -7491118232550380426
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_6
+      name: Grass slope tileset_6
       rect:
         serializedVersion: 2
         x: 192
@@ -531,14 +387,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc8722e467d890070800000000000000
-      internalID: 8073139346294864079
+      spriteID: c748d6129c07d2f10800000000000000
+      internalID: 2246575798279308412
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_7
+      name: Grass slope tileset_7
       rect:
         serializedVersion: 2
         x: 0
@@ -552,14 +408,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ed72ca21fe40d1e0800000000000000
-      internalID: -2175151822308475415
+      spriteID: 6dcf82494e26855e0800000000000000
+      internalID: -1920676507195736874
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_8
+      name: Grass slope tileset_8
       rect:
         serializedVersion: 2
         x: 32
@@ -573,14 +429,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a0cf79bb9259c730800000000000000
-      internalID: 4019834971190444199
+      spriteID: 91b465a90ccf14a10800000000000000
+      internalID: 1892071222625585945
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_9
+      name: Grass slope tileset_9
       rect:
         serializedVersion: 2
         x: 64
@@ -594,14 +450,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a28b9c14f9e0c8e0800000000000000
-      internalID: -1675081826720578906
+      spriteID: e65ca234c25a15310800000000000000
+      internalID: 1392075369358214510
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_10
+      name: Grass slope tileset_10
       rect:
         serializedVersion: 2
         x: 96
@@ -615,14 +471,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f02614cb89a8ab320800000000000000
-      internalID: 2574522525593723407
+      spriteID: 71f97e53692c75010800000000000000
+      internalID: 1177623777985928983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_11
+      name: Grass slope tileset_11
       rect:
         serializedVersion: 2
         x: 128
@@ -636,14 +492,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 097de49795c59a770800000000000000
-      internalID: 8622524500934580112
+      spriteID: 15883e9b118c4e710800000000000000
+      internalID: 1721720936021067857
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_12
+      name: Grass slope tileset_12
       rect:
         serializedVersion: 2
         x: 160
@@ -657,14 +513,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1137147cf17361b70800000000000000
-      internalID: 8869337125779239697
+      spriteID: 38f67304eedf1d4c0800000000000000
+      internalID: -4264348172421730429
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_13
+      name: Grass slope tileset_13
       rect:
         serializedVersion: 2
         x: 192
@@ -678,14 +534,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2a1595b8d9a8c960800000000000000
-      internalID: 7622529117549042219
+      spriteID: 83b8940a5a17937e0800000000000000
+      internalID: -1785270821102974152
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_14
+      name: Grass slope tileset_14
       rect:
         serializedVersion: 2
         x: 0
@@ -699,14 +555,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57fe5ff478a90d810800000000000000
-      internalID: 1788098958018867061
+      spriteID: 0a4c3648378aaf7b0800000000000000
+      internalID: -5189650406495239008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_15
+      name: Grass slope tileset_15
       rect:
         serializedVersion: 2
         x: 32
@@ -720,14 +576,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03b0714c5226207f0800000000000000
-      internalID: -647847482044773584
+      spriteID: 51adee599d52306a0800000000000000
+      internalID: -6484297422029792747
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_16
+      name: Grass slope tileset_16
       rect:
         serializedVersion: 2
         x: 64
@@ -741,14 +597,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b79b0b14fea9aedb0800000000000000
-      internalID: -4761823303600916101
+      spriteID: f1c766cd436d758b0800000000000000
+      internalID: -5163422925232636897
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_17
+      name: Grass slope tileset_17
       rect:
         serializedVersion: 2
         x: 96
@@ -762,14 +618,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f07cdd1b5f55e3880800000000000000
-      internalID: -8629365322255841521
+      spriteID: 5269fd713bd155430800000000000000
+      internalID: 3770952918029538853
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_18
+      name: Grass slope tileset_18
       rect:
         serializedVersion: 2
         x: 128
@@ -783,14 +639,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1401ce69a3a100670800000000000000
-      internalID: 8502824935417974849
+      spriteID: c53a3486abaf3b500800000000000000
+      internalID: 410947669540971356
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_19
+      name: Grass slope tileset_19
       rect:
         serializedVersion: 2
         x: 160
@@ -804,14 +660,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b82f49cf166d45e0800000000000000
-      internalID: -1923769179109906247
+      spriteID: 61a02bd5992df2c40800000000000000
+      internalID: 5489838026931702294
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_20
+      name: Grass slope tileset_20
       rect:
         serializedVersion: 2
         x: 192
@@ -825,14 +681,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f13f078012797b5a0800000000000000
-      internalID: -6505564968582057185
+      spriteID: 6e2e960c40322b040800000000000000
+      internalID: 4661827067596890854
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_21
+      name: Grass slope tileset_21
       rect:
         serializedVersion: 2
         x: 0
@@ -846,14 +702,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09a5199c07c807d20800000000000000
-      internalID: 3274271345144322704
+      spriteID: db7eb83d90a66aec0800000000000000
+      internalID: -3556038265326016579
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_22
+      name: Grass slope tileset_22
       rect:
         serializedVersion: 2
         x: 32
@@ -867,14 +723,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdda6608f77769f60800000000000000
-      internalID: 8040745574215364059
+      spriteID: 763075726ec38bf20800000000000000
+      internalID: 3438565274697532263
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_23
+      name: Grass slope tileset_23
       rect:
         serializedVersion: 2
         x: 64
@@ -888,14 +744,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65956b97b414fcbb0800000000000000
-      internalID: -4913636876017575594
+      spriteID: 9e53fd54b064c48e0800000000000000
+      internalID: -1707913144449419799
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_24
+      name: Grass slope tileset_24
       rect:
         serializedVersion: 2
         x: 96
@@ -909,14 +765,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a707c65b95f3970d0800000000000000
-      internalID: -3424636387110129542
+      spriteID: 510e362a28268f9d0800000000000000
+      internalID: -2740332060045221867
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_25
+      name: Grass slope tileset_25
       rect:
         serializedVersion: 2
         x: 128
@@ -930,14 +786,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4058cf41e0c73900800000000000000
-      internalID: 664211543999139919
+      spriteID: bf47e8663be1a6640800000000000000
+      internalID: 5073901686054876411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_26
+      name: Grass slope tileset_26
       rect:
         serializedVersion: 2
         x: 160
@@ -951,14 +807,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cc2751564161d120800000000000000
-      internalID: 2436835828024421573
+      spriteID: 5ba7f674f3da01010800000000000000
+      internalID: 1157615591527250613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_27
+      name: Grass slope tileset_27
       rect:
         serializedVersion: 2
         x: 192
@@ -972,14 +828,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e78cb57da0cdd0810800000000000000
-      internalID: 1733283370728409214
+      spriteID: 2c52a91499b934700800000000000000
+      internalID: 523433064238032322
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_28
+      name: Grass slope tileset_28
       rect:
         serializedVersion: 2
         x: 0
@@ -993,14 +849,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cad3ba77182666460800000000000000
-      internalID: 7234578159615294892
+      spriteID: c74c1b015d990a740800000000000000
+      internalID: 5161294313353757820
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_29
+      name: Grass slope tileset_29
       rect:
         serializedVersion: 2
         x: 32
@@ -1014,14 +870,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9ae52e9e80c22ba0800000000000000
-      internalID: -6115113625244538213
+      spriteID: df5298fdd21284570800000000000000
+      internalID: 8451041181668287997
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_30
+      name: Grass slope tileset_30
       rect:
         serializedVersion: 2
         x: 64
@@ -1035,14 +891,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f60bad0ef436deb0800000000000000
-      internalID: -4695507295731513608
+      spriteID: 828f33ab18e844030800000000000000
+      internalID: 3478061500062758952
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_31
+      name: Grass slope tileset_31
       rect:
         serializedVersion: 2
         x: 96
@@ -1056,14 +912,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4dadec740f653e6d0800000000000000
-      internalID: -2962428539882775852
+      spriteID: 17f08967059dd4650800000000000000
+      internalID: 6218865600078810993
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_32
+      name: Grass slope tileset_32
       rect:
         serializedVersion: 2
         x: 128
@@ -1077,14 +933,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 530a823ca1e060630800000000000000
-      internalID: 3892814436014530613
+      spriteID: 2681b000c53cb84c0800000000000000
+      internalID: -4284115820607760286
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_33
+      name: Grass slope tileset_33
       rect:
         serializedVersion: 2
         x: 160
@@ -1098,14 +954,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17e6eef669af71d00800000000000000
-      internalID: 943498170987343473
+      spriteID: a366cdf548295ef60800000000000000
+      internalID: 8063011805118359098
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_34
+      name: Grass slope tileset_34
       rect:
         serializedVersion: 2
         x: 192
@@ -1119,14 +975,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c68ff45c9fd6eae0800000000000000
-      internalID: -1520281961657039162
+      spriteID: 3a45f1be86ba0abe0800000000000000
+      internalID: -1467985011413134173
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_35
+      name: Grass slope tileset_35
       rect:
         serializedVersion: 2
         x: 0
@@ -1140,14 +996,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a50f3c52109dd9820800000000000000
-      internalID: 2926733931812483162
+      spriteID: 723e248383f07d0a0800000000000000
+      internalID: -6856995173511797977
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_36
+      name: Grass slope tileset_36
       rect:
         serializedVersion: 2
         x: 32
@@ -1161,14 +1017,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcf80c2bedfb24cc0800000000000000
-      internalID: -3728206578306740275
+      spriteID: 13a1a267eca0f6a50800000000000000
+      internalID: 6516439067690408497
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_37
+      name: Grass slope tileset_37
       rect:
         serializedVersion: 2
         x: 64
@@ -1182,14 +1038,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a675389766f2f660800000000000000
-      internalID: 7418262461028333224
+      spriteID: 983c7fdeeb0815090800000000000000
+      internalID: -8047509501609786487
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_38
+      name: Grass slope tileset_38
       rect:
         serializedVersion: 2
         x: 96
@@ -1203,14 +1059,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a77bb1031fcee7070800000000000000
-      internalID: 8106176899951867770
+      spriteID: 062bdd1e005f08e70800000000000000
+      internalID: 9115555029936091744
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_39
+      name: Grass slope tileset_39
       rect:
         serializedVersion: 2
         x: 128
@@ -1224,14 +1080,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5efc9619b4743f30800000000000000
-      internalID: 4554393461475573339
+      spriteID: be69be05a78792a90800000000000000
+      internalID: -7338201651084552469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_40
+      name: Grass slope tileset_40
       rect:
         serializedVersion: 2
         x: 160
@@ -1245,14 +1101,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1cfabafd49d352d0800000000000000
-      internalID: -3291047973735433188
+      spriteID: a58d44dd9fb389900800000000000000
+      internalID: 691368487146543194
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_41
+      name: Grass slope tileset_41
       rect:
         serializedVersion: 2
         x: 192
@@ -1266,14 +1122,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 401126003ddd00b00800000000000000
-      internalID: 792877432731472132
+      spriteID: 985139c24fdbf8520800000000000000
+      internalID: 2706590757490464137
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_42
+      name: Grass slope tileset_42
       rect:
         serializedVersion: 2
         x: 0
@@ -1287,14 +1143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4581500c2be76ac80800000000000000
-      internalID: -8311816756074833836
+      spriteID: 90987f05a1cbe4680800000000000000
+      internalID: -8768864603230205687
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_43
+      name: Grass slope tileset_43
       rect:
         serializedVersion: 2
         x: 32
@@ -1308,14 +1164,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74f7e20c740e05f70800000000000000
-      internalID: 9174079039725272903
+      spriteID: acdcd4bcedaac5330800000000000000
+      internalID: 3701020867662040522
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_44
+      name: Grass slope tileset_44
       rect:
         serializedVersion: 2
         x: 64
@@ -1329,14 +1185,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7f6fad563f7d8330800000000000000
-      internalID: 3714765139127267196
+      spriteID: 03033a2fe4a24df50800000000000000
+      internalID: 6905190647232409648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_45
+      name: Grass slope tileset_45
       rect:
         serializedVersion: 2
         x: 96
@@ -1350,14 +1206,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 546b3a1d46f2e0b30800000000000000
-      internalID: 4255390807972099653
+      spriteID: 7ec9904bd504f9c30800000000000000
+      internalID: 4368280934769335527
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_46
+      name: Grass slope tileset_46
       rect:
         serializedVersion: 2
         x: 128
@@ -1371,14 +1227,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1522e80ead0882250800000000000000
-      internalID: 5920123387737154129
+      spriteID: 891f03bda9acb8d80800000000000000
+      internalID: -8247275526147739240
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass tileset_47
+      name: Grass slope tileset_47
       rect:
         serializedVersion: 2
         x: 160
@@ -1392,8 +1248,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7dda65aec3bf62e80800000000000000
-      internalID: -8203593432160621097
+      spriteID: 66240a6e0a37c7490800000000000000
+      internalID: -7747190124082871706
       vertices: []
       indices: 
       edges: []
