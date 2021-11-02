@@ -9,13 +9,14 @@ public class HookCrystal : MonoBehaviour
 
     HookData hookData;
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             if (hookData == null) hookData = collision.gameObject.GetComponent<HookData>();
             if (hookData.AvailableHooks < hookAmount)
             hookData.AddHook(hookAmount - hookData.AvailableHooks);
+            Debug.Log(hookData.AvailableHooks);
         }
     }
 }

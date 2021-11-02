@@ -51,7 +51,6 @@ public class ShootingHookState : State
             context.TransitionTo((int)PlayerMovement.StateOptions.InAir);
             yield break;
         }
-
         GetContext<PlayerMovement>().hookData.UseHook();
 
         // Instantiate hook prefab

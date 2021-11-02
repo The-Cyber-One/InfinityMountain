@@ -55,6 +55,5 @@ public class PlayerMovement : StateMachine
         if (!OnGround) return;
         float dot = Vector2.Dot(collision.GetContact(0).normal, Vector2.up);
         OnSlope = dot < slopePrecision;
-        Debug.Log(dot);
     }
 }
