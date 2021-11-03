@@ -37,8 +37,7 @@ public class PlayerMovement : StateMachine
     [SerializeField]
     LayerMask groundLayer;
     [SerializeField]
-    float slopePrecision = 0.80f;
-
+    float slopePrecision = 0.80f, slopeBounceForce = 1f;
 
     private void Start()
     {
@@ -50,10 +49,20 @@ public class PlayerMovement : StateMachine
         StateMachineSetup((int)StateOptions.OnGround);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionStay2D(Collision2D collision)
     {
         if (!OnGround) return;
-        float dot = Vector2.Dot(collision.GetContact(0).normal, Vector2.up);
-        OnSlope = dot < slopePrecision;
+        bool previousOnSlope = OnSlope;
+        OnSlope = true;
+        foreach (ContactPoint2D contact in collision.contacts)
+        {
+            float dot = Vector2.Dot(contact.normal, Vector2.up);
+            if (dot > slopePrecision)
+            {
+                OnSlope = false;
+                break;
+            }
+        }
+        if (!previousOnSlope && OnSlope) rigidbody.AddForce(collision.GetContact(0).normal * slopeBounceForce, ForceMode2D.Impulse);
     }
 }

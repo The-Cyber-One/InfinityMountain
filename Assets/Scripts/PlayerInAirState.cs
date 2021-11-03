@@ -14,6 +14,7 @@ public class PlayerInAirState : State
     public override void Exit()
     {
         GameEvents.InputedJump -= ShootHook;
+        GetContext<PlayerMovement>().playerInput.ResetMovementInput();
     }
 
     void Update()

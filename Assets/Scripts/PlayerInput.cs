@@ -27,6 +27,12 @@ public class PlayerInput : MonoBehaviour
         }
     }
 
+    public void ResetMovementInput()
+    {
+     
+        Input.ResetInputAxes();
+    }
+
     void Update()
     {
         // Movement direction
