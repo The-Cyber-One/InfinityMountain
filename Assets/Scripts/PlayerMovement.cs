@@ -63,6 +63,11 @@ public class PlayerMovement : StateMachine
                 break;
             }
         }
-        if (!previousOnSlope && OnSlope) rigidbody.AddForce(collision.GetContact(0).normal * slopeBounceForce, ForceMode2D.Impulse);
+        if (OnSlope) 
+            rigidbody.AddForce(collision.GetContact(0).normal * slopeBounceForce, ForceMode2D.Impulse);
+        if (!previousOnSlope && OnSlope)
+        {
+            //playerInput.ResetMovementInput();
+        }
     }
 }
