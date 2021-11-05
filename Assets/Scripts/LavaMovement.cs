@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering;
 
 public class LavaMovement : MonoBehaviour
 {
     [SerializeField]
     SpriteRenderer renderer;
+    [SerializeField]
+    Light2D light;
     [SerializeField]
     Collider2D collider;
     [SerializeField]
