@@ -8,6 +8,13 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerOnWallState))]
 public class PlayerMovement : StateMachine
 {
+    public static PlayerMovement instance;
+
+    void Awake()
+    {
+        instance = this;
+    }
+
     public enum StateOptions
     {
         OnGround,
@@ -19,6 +26,8 @@ public class PlayerMovement : StateMachine
     public HookData hookData;
     public Rigidbody2D rigidbody;
     public SpriteRenderer spriteRenderer;
+
+    public bool OnSlope { get; private set; }
     public bool OnGround
     {
         get
@@ -30,7 +39,6 @@ public class PlayerMovement : StateMachine
                 Vector2.down, groundCheckDistance, groundLayer);
         }
     }
-    public bool OnSlope { get; private set; }
 
     [SerializeField]
     float groundCheckDistance = 0.01f;
@@ -63,11 +71,7 @@ public class PlayerMovement : StateMachine
                 break;
             }
         }
-        if (OnSlope) 
+        if (OnSlope)
             rigidbody.AddForce(collision.GetContact(0).normal * slopeBounceForce, ForceMode2D.Impulse);
-        if (!previousOnSlope && OnSlope)
-        {
-            //playerInput.ResetMovementInput();
-        }
     }
 }

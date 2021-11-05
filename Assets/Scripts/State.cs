@@ -19,6 +19,12 @@ public abstract class State : MonoBehaviour
         return (T)Convert.ChangeType(context, typeof(T));
     }
 
+    void OnDestroy()
+    {
+        if (enabled) 
+            Exit();
+    }
+
     /// <summary>
     /// Enter is called when this state is activated
     /// </summary>

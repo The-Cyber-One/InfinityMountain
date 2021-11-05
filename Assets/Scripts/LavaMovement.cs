@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 public class LavaMovement : MonoBehaviour
 {
@@ -51,6 +52,7 @@ public class LavaMovement : MonoBehaviour
 
         renderer.enabled = true;
         collider.enabled = true;
+        light.enabled = true;
         startTrigger.enabled = false;
 
         StartCoroutine(LavaToStartPosition());
@@ -79,7 +81,7 @@ public class LavaMovement : MonoBehaviour
     {
         if (!collision.CompareTag(playerTag)) return;
 
-        Debug.Log("Player hit by lava. Kill player");
+        GameManager.KillPlayer();
     }
 
     void FixedUpdate()
