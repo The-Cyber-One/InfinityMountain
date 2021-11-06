@@ -8,6 +8,8 @@ public class PlayerOnGroundState : State
     float speed = 1f;
     [SerializeField]
     float jumpHeight = 2f;
+    [SerializeField]
+    float coyoteTime = 0.2f;
 
     public override void Enter()
     {
@@ -25,9 +27,18 @@ public class PlayerOnGroundState : State
         // Walking
         Vector3 vector = GetContext<PlayerMovement>().playerInput.MovementDirection * Vector2.right * speed * Time.fixedDeltaTime + GetContext<PlayerMovement>().rigidbody.velocity.y * Vector2.up;
         GetContext<PlayerMovement>().rigidbody.velocity = vector;
+    }
 
+    void Update()
+    {
         // Transition Checks
-        if (!GetContext<PlayerMovement>().OnGround || GetContext<PlayerMovement>().OnSlope) context.TransitionTo((int)PlayerMovement.StateOptions.InAir);
+        if (!GetContext<PlayerMovement>().OnGround || GetContext<PlayerMovement>().OnSlope) StartCoroutine(SwitchStateToInAir());
+    }
+
+    IEnumerator SwitchStateToInAir()
+    {
+        yield return new WaitForSecondsRealtime(coyoteTime);
+        context.TransitionTo((int)PlayerMovement.StateOptions.InAir);
     }
 
 
@@ -36,10 +47,9 @@ public class PlayerOnGroundState : State
         GetContext<PlayerMovement>().rigidbody.isKinematic = false;
 
         // Assumes gravity to face downward
-        if (GetContext<PlayerMovement>().OnGround)
-        {
-            GetContext<PlayerMovement>().rigidbody.velocity = Vector2.up * Mathf.Sqrt(jumpHeight * -3.0f * Physics.gravity.y)
-                + GetContext<PlayerMovement>().rigidbody.velocity.x * Vector2.right;
-        }
+
+        GetContext<PlayerMovement>().rigidbody.velocity = Vector2.up * Mathf.Sqrt(jumpHeight * -3.0f * Physics.gravity.y)
+            + GetContext<PlayerMovement>().rigidbody.velocity.x * Vector2.right;
+
     }
 }

@@ -12,7 +12,9 @@ public class Checkpoint : MonoBehaviour
     [SerializeField]
     SpriteRenderer renderer;
     [SerializeField]
-    Light2D
+    Light2D light;
+    [SerializeField]
+    Animator animator;
     [SerializeField]
     [TagSelector]
     string playerTag;
@@ -31,6 +33,8 @@ public class Checkpoint : MonoBehaviour
     {
         if (!collision.CompareTag(playerTag)) return;
 
+        light.enabled = true;
+        animator.enabled = true;
         CheckpointManager.SetCheckpoint(transform.position, renderer.sprite, checkpointNumber);
     }
 }
