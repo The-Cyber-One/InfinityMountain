@@ -8,7 +8,7 @@ public class Checkpoint : MonoBehaviour
     [SerializeField]
     int checkpointNumber = 0;
     [SerializeField]
-    OnTriggerEnter2DEvent checkpointTrigger;
+    OnTrigger2DEvent checkpointTrigger;
     [SerializeField]
     SpriteRenderer renderer;
     [SerializeField]

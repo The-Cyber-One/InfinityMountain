@@ -27,7 +27,6 @@ public class PlayerMovement : StateMachine
     public Rigidbody2D rigidbody;
     public SpriteRenderer spriteRenderer;
 
-
     public bool OnSlope { get; private set; }
     public bool OnGround
     {
@@ -50,7 +49,7 @@ public class PlayerMovement : StateMachine
     [SerializeField]
     float slopePrecision = 0.80f, slopeBounceForce = 1f;
 
-    private void Start()
+    void Start()
     {
         states.Add((int)StateOptions.OnGround, GetComponent<PlayerOnGroundState>());
         states.Add((int)StateOptions.InAir, GetComponent<PlayerInAirState>());

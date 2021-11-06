@@ -18,6 +18,7 @@ public class PlayerInput : MonoBehaviour
     float mobileVelocity;
 
     public bool ScreenHasTouch { get { return Input.touchCount > 0; } }
+    public bool Jumping { get { return ScreenHasTouch || Input.GetButton("Jump"); } }
     bool ScreenClicked
     {
         get
@@ -25,12 +26,6 @@ public class PlayerInput : MonoBehaviour
             if (!ScreenHasTouch) return false;
             return Input.GetTouch(0).phase == TouchPhase.Began;
         }
-    }
-
-    public void ResetMovementInput()
-    {
-     
-        Input.ResetInputAxes();
     }
 
     void Update()

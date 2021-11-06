@@ -7,7 +7,7 @@ public class PlayerOnGroundState : State
     [SerializeField]
     float speed = 1f;
     [SerializeField]
-    float jumpHeight = 2f;
+    float jumpPower = 2f, maxJumpTime = 0.2f;
     [SerializeField]
     float coyoteTime = 0.2f;
 
@@ -53,14 +53,28 @@ public class PlayerOnGroundState : State
     }
 
 
-    private void Jump()
+    void Jump()
     {
         GetContext<PlayerMovement>().rigidbody.isKinematic = false;
 
+        StartCoroutine(Jumping());
+        Debug.Log("Jump");
         // Assumes gravity to face downward
+        //GetContext<PlayerMovement>().rigidbody.velocity = Vector2.up * Mathf.Sqrt(jumpHeight * -3.0f * Physics.gravity.y)
+        //    + GetContext<PlayerMovement>().rigidbody.velocity.x * Vector2.right;
+    }
 
-        GetContext<PlayerMovement>().rigidbody.velocity = Vector2.up * Mathf.Sqrt(jumpHeight * -3.0f * Physics.gravity.y)
-            + GetContext<PlayerMovement>().rigidbody.velocity.x * Vector2.right;
+    IEnumerator Jumping()
+    {
+        float timer = 0;
 
+        while (GetContext<PlayerMovement>().playerInput.Jumping && timer < maxJumpTime)
+        {
+            timer += Time.deltaTime;
+
+            GetContext<PlayerMovement>().rigidbody.velocity = Vector2.up * jumpPower + Vector2.right * GetContext<PlayerMovement>().rigidbody.velocity.x;
+
+            yield return null;
+        }
     }
 }

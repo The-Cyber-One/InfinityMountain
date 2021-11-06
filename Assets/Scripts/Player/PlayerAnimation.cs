@@ -7,7 +7,15 @@ public class PlayerAnimation : MonoBehaviour
     [SerializeField]
     Animator animator;
     [SerializeField]
+    SpriteRenderer renderer;
+    [SerializeField]
     Rigidbody2D rigidbody;
+    [SerializeField]
+    float slopeActivationTime = 0.1f, slopeDeactivationTime = 0.1f;
+    [SerializeField]
+    float mirrorDetection = 0.05f;
+
+    Coroutine setOnSlopeCoroutine;
 
     void OnEnable()
     {
@@ -26,14 +34,34 @@ public class PlayerAnimation : MonoBehaviour
         animator.SetInteger("hookAmount", amount);
     }
 
+
     void UpdateAnimatorOnSlope(bool value)
     {
+        if (setOnSlopeCoroutine != null)
+        {
+            StopCoroutine(setOnSlopeCoroutine);
+        }
+
+        setOnSlopeCoroutine = StartCoroutine(SetOnSlopeValue(value, value ? slopeActivationTime : slopeDeactivationTime));
+    }
+
+    IEnumerator SetOnSlopeValue(bool value, float time)
+    {
+        yield return new WaitForSecondsRealtime(time);
         animator.SetBool("onSlope", value);
     }
 
     void Update()
     {
         animator.SetFloat("xVelocity", Mathf.Abs(rigidbody.velocity.x));
-        
+
+        if (rigidbody.velocity.x >= mirrorDetection)
+        {
+            renderer.flipX = false;
+        }
+        else if (rigidbody.velocity.x <= -mirrorDetection)
+        {
+            renderer.flipX = true;
+        }
     }
 }

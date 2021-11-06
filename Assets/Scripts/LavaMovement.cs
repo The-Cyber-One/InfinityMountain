@@ -20,7 +20,7 @@ public class LavaMovement : MonoBehaviour
 
     [Header("Start movement")]
     [SerializeField]
-    OnTriggerEnter2DEvent startTrigger;
+    OnTrigger2DEvent startTrigger;
     [SerializeField]
     Transform startPosition;
     [SerializeField]
@@ -28,7 +28,7 @@ public class LavaMovement : MonoBehaviour
 
     [Header("Auto movement")]
     [SerializeField]
-    OnTriggerEnter2DEvent autoMovementTrigger;
+    OnTrigger2DEvent autoMovementTrigger;
     [SerializeField]
     float speed = 1f;
 
