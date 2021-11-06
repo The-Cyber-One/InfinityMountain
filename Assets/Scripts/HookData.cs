@@ -31,6 +31,7 @@ public class HookData : MonoBehaviour
         if (AvailableHooks == maxHooks) return false;
         AvailableHooks += amount;
         if (AvailableHooks > maxHooks) AvailableHooks = maxHooks;
+        GameEvents.AvailableHooksChanged?.Invoke(AvailableHooks);
         return true;
     }
 }

@@ -11,6 +11,8 @@ public class PlayerOnGroundState : State
     [SerializeField]
     float coyoteTime = 0.2f;
 
+    bool switchingState = false;
+
     public override void Enter()
     {
         GameEvents.InputedJump += Jump;
@@ -32,12 +34,21 @@ public class PlayerOnGroundState : State
     void Update()
     {
         // Transition Checks
-        if (!GetContext<PlayerMovement>().OnGround || GetContext<PlayerMovement>().OnSlope) StartCoroutine(SwitchStateToInAir());
+        if (GetContext<PlayerMovement>().OnSlope) SwitchStateToInAir();
+        if (!GetContext<PlayerMovement>().OnGround && !switchingState)
+        {
+            switchingState = true;
+            Invoke(nameof(SwitchStateToInAir), coyoteTime);
+        }
+        if (GetContext<PlayerMovement>().OnGround)
+        {
+            switchingState = false;
+            CancelInvoke(nameof(SwitchStateToInAir));
+        }
     }
 
-    IEnumerator SwitchStateToInAir()
+    void SwitchStateToInAir()
     {
-        yield return new WaitForSecondsRealtime(coyoteTime);
         context.TransitionTo((int)PlayerMovement.StateOptions.InAir);
     }
 

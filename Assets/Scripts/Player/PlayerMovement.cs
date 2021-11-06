@@ -62,6 +62,7 @@ public class PlayerMovement : StateMachine
         if (!OnGround) return;
         bool previousOnSlope = OnSlope;
         OnSlope = true;
+
         foreach (ContactPoint2D contact in collision.contacts)
         {
             float dot = Vector2.Dot(contact.normal, Vector2.up);
@@ -71,6 +72,10 @@ public class PlayerMovement : StateMachine
                 break;
             }
         }
+
+        if (previousOnSlope != OnSlope)
+            GameEvents.OnSlopeChanged?.Invoke(OnSlope);
+
         if (OnSlope)
             rigidbody.AddForce(collision.GetContact(0).normal * slopeBounceForce, ForceMode2D.Impulse);
     }
