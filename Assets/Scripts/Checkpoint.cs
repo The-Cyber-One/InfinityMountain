@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class Checkpoint : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class Checkpoint : MonoBehaviour
     OnTriggerEnter2DEvent checkpointTrigger;
     [SerializeField]
     SpriteRenderer renderer;
+    [SerializeField]
+    Light2D
     [SerializeField]
     [TagSelector]
     string playerTag;
