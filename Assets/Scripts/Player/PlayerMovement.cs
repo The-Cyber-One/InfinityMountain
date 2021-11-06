@@ -27,19 +27,22 @@ public class PlayerMovement : StateMachine
     public Rigidbody2D rigidbody;
     public SpriteRenderer spriteRenderer;
 
+
     public bool OnSlope { get; private set; }
     public bool OnGround
     {
         get
         {
             return Physics2D.BoxCast(
-                new Vector2(spriteRenderer.bounds.center.x, spriteRenderer.bounds.min.y - groundCheckDistance / 2),
-                new Vector2(spriteRenderer.bounds.size.x - 0.1f, groundCheckDistance),
+                new Vector2(collider.bounds.center.x, collider.bounds.min.y - groundCheckDistance / 2),
+                new Vector2(collider.bounds.size.x - 0.1f, groundCheckDistance),
                 0,
                 Vector2.down, groundCheckDistance, groundLayer);
         }
     }
 
+    [SerializeField]
+    Collider2D collider;
     [SerializeField]
     float groundCheckDistance = 0.01f;
     [SerializeField]

@@ -34,5 +34,6 @@ public class PlayerAnimation : MonoBehaviour
     void Update()
     {
         animator.SetFloat("xVelocity", Mathf.Abs(rigidbody.velocity.x));
+        
     }
 }
