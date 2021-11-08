@@ -121,8 +121,8 @@ TextureImporter:
       name: Background_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
+        x: 1
+        y: 35
         width: 32
         height: 32
       alignment: 0
@@ -142,8 +142,8 @@ TextureImporter:
       name: Background_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
+        x: 35
+        y: 35
         width: 32
         height: 32
       alignment: 0
@@ -163,8 +163,8 @@ TextureImporter:
       name: Background_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 1
+        y: 1
         width: 32
         height: 32
       alignment: 0
@@ -184,8 +184,8 @@ TextureImporter:
       name: Background_3
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
+        x: 35
+        y: 1
         width: 32
         height: 32
       alignment: 0
@@ -205,8 +205,8 @@ TextureImporter:
       name: Background_4
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
+        x: 69
+        y: 1
         width: 32
         height: 32
       alignment: 0
