@@ -15,6 +15,11 @@ public class PlayerAnimation : MonoBehaviour
     [SerializeField]
     float mirrorDetection = 0.05f;
 
+    [Header("Jump animation")]
+    [SerializeField]
+    Sprite[] startJump,
+        upMovement, downMovement, landingJump;
+
     Coroutine setOnSlopeCoroutine;
 
     void OnEnable()

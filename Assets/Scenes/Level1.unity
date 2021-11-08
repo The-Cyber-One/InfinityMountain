@@ -105332,8 +105332,8 @@ MonoBehaviour:
   startPosition: {fileID: 240152939}
   smoothing: 0.02
   autoMovementTrigger: {fileID: 484728391}
-  lowDeathCountSpeed: 2
-  highDeathCountSpeed: 1
+  lowDeathCountSpeed: 1.2
+  highDeathCountSpeed: 0.2
   minSpeedDeaths: 5
   maxSpeedDeaths: 15
 --- !u!61 &1309684630
@@ -105790,6 +105790,10 @@ MonoBehaviour:
   slopeActivationTime: 0.1
   slopeDeactivationTime: 0.1
   mirrorDetection: 0.05
+  startJump: []
+  upMovement: []
+  downMovement: []
+  landingJump: []
 --- !u!4 &1524335909
 Transform:
   m_ObjectHideFlags: 0
