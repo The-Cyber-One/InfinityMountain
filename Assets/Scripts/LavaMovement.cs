@@ -30,7 +30,13 @@ public class LavaMovement : MonoBehaviour
     [SerializeField]
     OnTrigger2DEvent autoMovementTrigger;
     [SerializeField]
-    float speed = 1f;
+    float lowDeathCountSpeed = 1f, highDeathCountSpeed = 2f;
+    [SerializeField]
+    [Min(0)]
+    int minSpeedDeaths;
+    [SerializeField]
+    [Min(1)]
+    int maxSpeedDeaths;
 
     bool lavaIsMoving = false;
 
@@ -63,6 +69,7 @@ public class LavaMovement : MonoBehaviour
         if (!collision.CompareTag(playerTag)) return;
         lavaIsMoving = true;
         rigidbody.WakeUp();
+        float speed = Mathf.Lerp(lowDeathCountSpeed, highDeathCountSpeed, Mathf.Max(GameManager.instance.CheckpointDeathCounter, minSpeedDeaths) / (float)maxSpeedDeaths);
         rigidbody.velocity = Vector2.up * speed;
     }
 
@@ -87,6 +94,7 @@ public class LavaMovement : MonoBehaviour
     void FixedUpdate()
     {
         if (!lavaIsMoving) return;
+
 
     }
 }

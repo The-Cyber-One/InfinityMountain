@@ -22,13 +22,20 @@ public class GameManager : MonoBehaviour
 
         SceneManager.activeSceneChanged += SceneChanged;
     }
+    public int CheckpointDeathCounter { get; private set; }
 
     bool updateCheckpoint;
+
+    public static void ResetDeaths()
+    {
+        instance.CheckpointDeathCounter = 0;
+    }
 
     public static void KillPlayer()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         instance.updateCheckpoint = true;
+        instance.CheckpointDeathCounter++;
     }
 
     void SceneChanged(Scene previous, Scene next)

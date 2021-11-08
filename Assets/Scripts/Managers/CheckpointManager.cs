@@ -24,5 +24,7 @@ public static class CheckpointManager
 
         activeCheckpoint = checkpointNumber;
         RawCheckpointPosition = position - (sprite.bounds.center.y + sprite.bounds.size.y / 2) * Vector2.up;
+
+        GameManager.ResetDeaths();
     }
 }
