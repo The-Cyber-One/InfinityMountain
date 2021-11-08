@@ -2,29 +2,53 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class CheckpointManager
+public class CheckpointManager : MonoBehaviour
 {
-    static Vector2 RawCheckpointPosition { get; set; }
-    static int activeCheckpoint;
+    public static CheckpointManager instance;
 
-    public static void ResetCheckpoint()
+    Vector2 rawCheckpointPosition;
+    int activeCheckpoint;
+
+    Dictionary<int, Checkpoint> checkpoints = new Dictionary<int, Checkpoint>();
+
+    void Awake()
+    {
+        if (instance == null) instance = this;
+        else Destroy(this);
+    }
+
+    public static void FindCheckpoints()
+    {
+        foreach (Checkpoint checkpoint in FindObjectsOfType(typeof(Checkpoint)))
+        {
+            instance.checkpoints.Add(checkpoint.checkpointNumber, checkpoint);
+        }
+    }
+
+    public void ResetCheckpoint()
     {
         activeCheckpoint = 0;
-        RawCheckpointPosition = Vector2.zero;
+        rawCheckpointPosition = Vector2.zero;
     }
 
-    public static void MoveToCheckpoint(Transform transform, Sprite sprite)
+    public void MoveToCheckpoint()
     {
-        transform.position = RawCheckpointPosition + (sprite.bounds.center.y + sprite.bounds.size.y / 2) * Vector2.up;
+        Sprite sprite = PlayerMovement.instance.GetComponent<SpriteRenderer>().sprite;
+        PlayerMovement.instance.transform.position = rawCheckpointPosition + (sprite.bounds.center.y + sprite.bounds.size.y / 2) * Vector2.up;
     }
 
-    public static void SetCheckpoint(Vector2 position, Sprite sprite, int checkpointNumber)
+    public void SetCheckpoint(int checkpointNumber)
     {
         if (checkpointNumber <= activeCheckpoint) return;
 
-        activeCheckpoint = checkpointNumber;
-        RawCheckpointPosition = position - (sprite.bounds.center.y + sprite.bounds.size.y / 2) * Vector2.up;
+        if (checkpoints.Count == 0) FindCheckpoints();
 
-        GameManager.ResetDeaths();
+        activeCheckpoint = checkpointNumber;
+        Sprite sprite = checkpoints[checkpointNumber].GetComponent<SpriteRenderer>().sprite;
+        rawCheckpointPosition = (Vector2)checkpoints[checkpointNumber].transform.position - (sprite.bounds.center.y + sprite.bounds.size.y / 2) * Vector2.up;
+
+        checkpoints[checkpointNumber].SetActive();
+
+        GameManager.instance.ResetDeaths();
     }
 }

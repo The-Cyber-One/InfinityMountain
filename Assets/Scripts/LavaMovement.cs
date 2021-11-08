@@ -88,7 +88,7 @@ public class LavaMovement : MonoBehaviour
     {
         if (!collision.CompareTag(playerTag)) return;
 
-        GameManager.KillPlayer();
+        GameManager.instance.KillPlayer();
     }
 
     void FixedUpdate()

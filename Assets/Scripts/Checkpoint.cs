@@ -5,8 +5,8 @@ using UnityEngine.Experimental.Rendering.Universal;
 
 public class Checkpoint : MonoBehaviour
 {
-    [SerializeField]
-    int checkpointNumber = 0;
+    public int checkpointNumber = 0;
+
     [SerializeField]
     OnTrigger2DEvent checkpointTrigger;
     [SerializeField]
@@ -33,8 +33,13 @@ public class Checkpoint : MonoBehaviour
     {
         if (!collision.CompareTag(playerTag)) return;
 
+        SetActive();
+        CheckpointManager.instance.SetCheckpoint(checkpointNumber);
+    }
+
+    public void SetActive()
+    {
         light.enabled = true;
         animator.enabled = true;
-        CheckpointManager.SetCheckpoint(transform.position, renderer.sprite, checkpointNumber);
     }
 }

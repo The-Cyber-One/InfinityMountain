@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,27 +23,38 @@ public class GameManager : MonoBehaviour
 
         SceneManager.activeSceneChanged += SceneChanged;
     }
+
     public int CheckpointDeathCounter { get; private set; }
 
+    int nextCheckpoint = 0;
     bool updateCheckpoint;
 
-    public static void ResetDeaths()
+    public void ResetDeaths()
     {
-        instance.CheckpointDeathCounter = 0;
+        CheckpointDeathCounter = 0;
     }
 
-    public static void KillPlayer()
+    public void KillPlayer()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        instance.updateCheckpoint = true;
-        instance.CheckpointDeathCounter++;
+        updateCheckpoint = true;
+        CheckpointDeathCounter++;
+    }
+
+    public void LoadLevelAtCheckpoint(ButtonData data)
+    {
+        SceneManager.LoadScene($"Level{data.level}");
+        nextCheckpoint = data.checkpoint;
+        if (data.checkpoint > 0)
+            updateCheckpoint = true;
     }
 
     void SceneChanged(Scene previous, Scene next)
     {
         if (updateCheckpoint)
         {
-            CheckpointManager.MoveToCheckpoint(PlayerMovement.instance.transform, PlayerMovement.instance.spriteRenderer.sprite);
+            CheckpointManager.instance.SetCheckpoint(nextCheckpoint);
+            CheckpointManager.instance.MoveToCheckpoint();
             updateCheckpoint = false;
         }
     }
