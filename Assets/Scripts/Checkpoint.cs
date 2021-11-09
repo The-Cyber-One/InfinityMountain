@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 public class Checkpoint : MonoBehaviour
 {
@@ -18,6 +19,14 @@ public class Checkpoint : MonoBehaviour
     [SerializeField]
     [TagSelector]
     string playerTag;
+    [SerializeField]
+    bool finalCheckpoint = false;
+    [SerializeField]
+    [Tooltip("Only active if finalCheckpoint is true")]
+    bool loadNextScene = false;
+    [SerializeField]
+    [Tooltip("Only active if finalCheckpoint is true and loadNextLevel is false")]
+    string nextSceneToLoad;
 
     void OnEnable()
     {
@@ -26,7 +35,7 @@ public class Checkpoint : MonoBehaviour
 
     void OnDisable()
     {
-        checkpointTrigger.onTriggerEnter2D -= CheckPointTrigger;   
+        checkpointTrigger.onTriggerEnter2D -= CheckPointTrigger;
     }
 
     void CheckPointTrigger(Collider2D collision)
@@ -41,5 +50,15 @@ public class Checkpoint : MonoBehaviour
     {
         light.enabled = true;
         animator.enabled = true;
+        if (finalCheckpoint) StartCoroutine(LevelCleared());
+    }
+
+    IEnumerator LevelCleared()
+    {
+        PlayerMovement.instance.playerInput.MovePlayerToPosition(transform.position, 0.5f);
+        yield return new WaitUntil(() => !PlayerMovement.instance.playerInput.BlockInput);
+
+        if (loadNextScene) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        else SceneManager.LoadScene(nextSceneToLoad);
     }
 }

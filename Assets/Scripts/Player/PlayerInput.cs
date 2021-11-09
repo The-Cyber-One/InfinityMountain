@@ -12,10 +12,14 @@ public class PlayerInput : MonoBehaviour
     public float MovementDirection { get; private set; } = 0;
     public float HookDirection { get; private set; } = 0;
 
+
+    [SerializeField]
+    float autoMovementSpeed = 0.5f;
     [SerializeField]
     [Range(0, 180)]
     float minRotation = 5, maxRotation = 30;
     float mobileVelocity;
+    public bool BlockInput { get; private set; } = false;
 
     public bool ScreenHasTouch { get { return Input.touchCount > 0; } }
     public bool Jumping { get { return ScreenHasTouch || Input.GetButton("Jump"); } }
@@ -30,6 +34,8 @@ public class PlayerInput : MonoBehaviour
 
     void Update()
     {
+        if (BlockInput) return;
+
         // Movement direction
         bool rotateRight = Input.acceleration.x < 0;
         mobileVelocity = Mathf.InverseLerp(minRotation / 180, maxRotation / 180, Mathf.Abs(Input.acceleration.x));
@@ -56,5 +62,24 @@ public class PlayerInput : MonoBehaviour
 
             GameEvents.InputedJump?.Invoke();
         }
+    }
+
+    public void MovePlayerToPosition(Vector2 postion, float radius)
+    {
+        BlockInput = true;
+        StartCoroutine(WalkPlayer(postion, radius));
+    }
+
+    IEnumerator WalkPlayer(Vector2 position, float radius)
+    {
+        Vector2 direction;
+        do
+        {
+            direction = position - (Vector2)transform.position;
+            MovementDirection = (position - (Vector2)transform.position).normalized.x * autoMovementSpeed;
+            yield return null;
+        }
+        while (direction.magnitude > radius);
+        BlockInput = false;
     }
 }

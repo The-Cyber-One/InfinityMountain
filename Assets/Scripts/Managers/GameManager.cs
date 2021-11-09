@@ -41,6 +41,16 @@ public class GameManager : MonoBehaviour
         CheckpointDeathCounter++;
     }
 
+    public void LoadNextLevel()
+    {
+        string sceneName = SceneManager.GetActiveScene().name;
+        if (sceneName.StartsWith("Level"))
+        {
+            int level = int.Parse(sceneName.TrimStart("Level".ToCharArray())) + 1;
+            SceneManager.LoadScene($"Level{level}");
+        }
+    }
+
     public void LoadLevelAtCheckpoint(int level, int checkpoint)
     {
         SceneManager.LoadScene($"Level{level}");
