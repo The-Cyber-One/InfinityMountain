@@ -269,7 +269,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8527665373769308658}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff2341948b29e88469689128fddd53b4, type: 3}
   m_Name: 
@@ -278,7 +278,7 @@ MonoBehaviour:
   upWallJumpDistance: 2
   sideWallJumpHeight: 2
   sideWallJumpDistance: 4
-  startSlidingTime: 0.3
+  startSlidingTime: 0.5
 --- !u!114 &8527665373769308656
 MonoBehaviour:
   m_ObjectHideFlags: 0
