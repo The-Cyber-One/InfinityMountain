@@ -26,6 +26,9 @@ public class PlayerMovement : StateMachine
     public HookData hookData;
     public Rigidbody2D rigidbody;
     public SpriteRenderer spriteRenderer;
+    public Collider2D collider;
+    public float groundCheckDistance = 0.01f;
+    public LayerMask groundLayer;
 
     public bool OnSlope { get; private set; }
     public bool OnGround
@@ -41,12 +44,6 @@ public class PlayerMovement : StateMachine
     }
 
     [SerializeField]
-    Collider2D collider;
-    [SerializeField]
-    float groundCheckDistance = 0.01f;
-    [SerializeField]
-    LayerMask groundLayer;
-    [SerializeField]
     float slopePrecision = 0.8f, slopeBounceForce = 1f;
 
     void Start()
@@ -57,6 +54,15 @@ public class PlayerMovement : StateMachine
         states.Add((int)StateOptions.OnWall, GetComponent<PlayerOnWallState>());
 
         StateMachineSetup((int)StateOptions.OnGround);
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.CompareTag("Enemy"))
+        {
+            rigidbody.velocity = (transform.position - collision.transform.position) * collision.transform.GetComponent<EnemyExplosion>().explosionPower;
+            collision.transform.GetComponent<EnemyExplosion>().Explode();
+        }
     }
 
     void OnCollisionStay2D(Collision2D collision)

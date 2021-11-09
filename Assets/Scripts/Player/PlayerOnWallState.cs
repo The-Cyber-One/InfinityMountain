@@ -42,13 +42,17 @@ public class PlayerOnWallState : State
     void Update()
     {
         if (!isSliding) return;
-        if (GetContext<PlayerMovement>().OnGround)
+        if (GetContext<PlayerMovement>().OnGround || !Physics2D.BoxCast(
+                new Vector2(GetContext<PlayerMovement>().collider.bounds.center.x, GetContext<PlayerMovement>().collider.bounds.min.y - GetContext<PlayerMovement>().groundCheckDistance / 2),
+                new Vector2(GetContext<PlayerMovement>().collider.bounds.size.x + 0.1f, GetContext<PlayerMovement>().groundCheckDistance),
+                0,
+                Vector2.down, GetContext<PlayerMovement>().groundCheckDistance, GetContext<PlayerMovement>().groundLayer))
         {
             if (enumerator != null)
             {
                 StopCoroutine(enumerator);
             }
-            context.TransitionTo((int)PlayerMovement.StateOptions.OnGround);
+            context.TransitionTo((int)PlayerMovement.StateOptions.InAir);
         }
     }
 

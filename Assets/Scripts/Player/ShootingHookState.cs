@@ -42,11 +42,15 @@ public class ShootingHookState : State
 
     IEnumerator HookMovement(float shootDirection)
     {
-        if (hookableTags.Length == 0) yield break;
-
         // Detect if hook can hit surface
         Vector3 offset = Vector3.right * (GetContext<PlayerMovement>().spriteRenderer.bounds.size.x / 2 * shootDirection);
         RaycastHit2D hit = Physics2D.Raycast(transform.position + offset, shootDirection * Vector2.right, maxShootDistance, shootableLayers);
+
+        if (!hit.collider || hookableTags.Length == 0)
+        {
+            context.TransitionTo((int)PlayerMovement.StateOptions.InAir);
+            yield break;
+        }
 
         bool foundHookable = false;
         for (int i = 0; i < hookableTags.Length; i++)
@@ -57,7 +61,7 @@ public class ShootingHookState : State
             }
         }
 
-        if (!hit.collider || !foundHookable)
+        if (!foundHookable)
         {
             context.TransitionTo((int)PlayerMovement.StateOptions.InAir);
             yield break;
@@ -106,6 +110,17 @@ public class ShootingHookState : State
         GetContext<PlayerMovement>().playerInput.wallSide = shootDirection;
 
         Destroy(hook);
+        if (hit.transform.CompareTag("Enemy"))
+        {
+            hit.transform.GetComponent<EnemyExplosion>().Explode();
+            GetContext<PlayerMovement>().rigidbody.bodyType = RigidbodyType2D.Dynamic;
+            Debug.Log(GetContext<PlayerMovement>().rigidbody.velocity);
+            GetContext<PlayerMovement>().rigidbody.velocity = new Vector2(shootDirection, 1) * hit.transform.GetComponent<EnemyExplosion>().explosionPower;
+            Debug.Log(GetContext<PlayerMovement>().rigidbody.velocity);
+            context.TransitionTo((int)PlayerMovement.StateOptions.InAir);
+            yield break;
+        }
+
         for (int i = 0; i < breakableTags.Length; i++)
         {
             if (breakableTags[i] == hit.transform.tag)

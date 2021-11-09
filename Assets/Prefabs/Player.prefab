@@ -233,8 +233,7 @@ MonoBehaviour:
   hookableTags:
   - Hookable
   - Enemy
-  breakableTags:
-  - Enemy
+  breakableTags: []
 --- !u!114 &8527665373769308664
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -16,7 +16,6 @@ public class HookCrystal : MonoBehaviour
             if (hookData == null) hookData = collision.gameObject.GetComponent<HookData>();
             if (hookData.AvailableHooks < hookAmount)
             hookData.AddHook(hookAmount - hookData.AvailableHooks);
-            Debug.Log(hookData.AvailableHooks);
         }
     }
 }

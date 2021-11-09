@@ -19,7 +19,7 @@ public class PlayerInAirState : State
     void Update()
     {
         // Transition checks
-        if (GetContext<PlayerMovement>().OnGround && !GetContext<PlayerMovement>().OnSlope) 
+        if (GetContext<PlayerMovement>().OnGround && !GetContext<PlayerMovement>().OnSlope)
             context.TransitionTo((int)PlayerMovement.StateOptions.OnGround);
     }
 
