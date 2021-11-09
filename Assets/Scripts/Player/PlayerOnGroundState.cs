@@ -19,7 +19,7 @@ public class PlayerOnGroundState : State
     public override void Enter()
     {
         GameEvents.InputedJump += Jump;
-        GetContext<PlayerMovement>().rigidbody.gravityScale = 1;
+        GetContext<PlayerMovement>().rigidbody.bodyType = RigidbodyType2D.Dynamic;
     }
 
     public override void Exit()
@@ -57,7 +57,7 @@ public class PlayerOnGroundState : State
 
     void Jump()
     {
-        GetContext<PlayerMovement>().rigidbody.isKinematic = false;
+        GetContext<PlayerMovement>().rigidbody.bodyType = RigidbodyType2D.Dynamic;
 
         StartCoroutine(Jumping());
     }

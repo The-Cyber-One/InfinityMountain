@@ -12,19 +12,50 @@ public class PlayerOnWallState : State
     float sideWallJumpHeight = 1f;
     [SerializeField]
     float sideWallJumpDistance = 2f;
+    [SerializeField]
+    float startSlidingTime = 0.5f;
+
+    bool isSliding;
+    Coroutine enumerator;
 
     public override void Enter()
     {
         GameEvents.InputedJump += Jump;
+        GetContext<PlayerMovement>().rigidbody.bodyType = RigidbodyType2D.Static;
+
+        isSliding = false;
+        Invoke(nameof(Sliding), startSlidingTime);
     }
 
     public override void Exit()
     {
         GameEvents.InputedJump -= Jump;
+        GetContext<PlayerMovement>().rigidbody.bodyType = RigidbodyType2D.Dynamic;
+    }
+
+    void Sliding()
+    {
+        isSliding = true;
+        GetContext<PlayerMovement>().rigidbody.bodyType = RigidbodyType2D.Dynamic;
+    }
+
+    void Update()
+    {
+        if (!isSliding) return;
+        if (GetContext<PlayerMovement>().OnGround)
+        {
+            if (enumerator != null)
+            {
+                StopCoroutine(enumerator);
+            }
+            context.TransitionTo((int)PlayerMovement.StateOptions.OnGround);
+        }
     }
 
     public void Jump()
     {
+        GetContext<PlayerMovement>().rigidbody.bodyType = RigidbodyType2D.Dynamic;
+
         // Check if player wants to jump away from wall
         if ((GetContext<PlayerMovement>().playerInput.HookDirection > 0 && GetContext<PlayerMovement>().playerInput.wallSide < 0) || (GetContext<PlayerMovement>().playerInput.HookDirection < 0 && GetContext<PlayerMovement>().playerInput.wallSide > 0))
         {
@@ -37,6 +68,7 @@ public class PlayerOnWallState : State
             GetContext<PlayerMovement>().rigidbody.velocity = Vector2.up * Mathf.Sqrt(upWallJumpHeight * -3.0f * Physics.gravity.y) + -GetContext<PlayerMovement>().playerInput.wallSide * upWallJumpDistance * Vector2.right;
         }
 
+        CancelInvoke(nameof(Sliding));
         GetContext<PlayerMovement>().playerInput.wallSide = 0;
         context.TransitionTo((int)PlayerMovement.StateOptions.InAir);
     }

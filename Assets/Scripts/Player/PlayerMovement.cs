@@ -47,7 +47,7 @@ public class PlayerMovement : StateMachine
     [SerializeField]
     LayerMask groundLayer;
     [SerializeField]
-    float slopePrecision = 0.80f, slopeBounceForce = 1f;
+    float slopePrecision = 0.8f, slopeBounceForce = 1f;
 
     void Start()
     {

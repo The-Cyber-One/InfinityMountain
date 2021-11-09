@@ -15,7 +15,7 @@ public class ShootingHookState : State
     LayerMask shootableLayers;
     [SerializeField]
     [TagSelector]
-    string hookableTag;
+    string[] hookableTags;
     [SerializeField]
     [TagSelector]
     string[] breakableTags;
@@ -35,30 +35,43 @@ public class ShootingHookState : State
         if (!enabled) return;
         StopCoroutine(coroutine);
         Destroy(hook);
-        GetContext<PlayerMovement>().rigidbody.gravityScale = 1;
+        GetContext<PlayerMovement>().rigidbody.bodyType = RigidbodyType2D.Dynamic;
         context.TransitionTo((int)PlayerMovement.StateOptions.InAir);
     }
 
 
     IEnumerator HookMovement(float shootDirection)
     {
+        if (hookableTags.Length == 0) yield break;
+
         // Detect if hook can hit surface
         Vector3 offset = Vector3.right * (GetContext<PlayerMovement>().spriteRenderer.bounds.size.x / 2 * shootDirection);
         RaycastHit2D hit = Physics2D.Raycast(transform.position + offset, shootDirection * Vector2.right, maxShootDistance, shootableLayers);
 
-        if (!hit.collider || !hit.transform.CompareTag(hookableTag))
+        bool foundHookable = false;
+        for (int i = 0; i < hookableTags.Length; i++)
+        {
+            if (hit.transform.CompareTag(hookableTags[i]))
+            {
+                foundHookable = true;
+            }
+        }
+
+        if (!hit.collider || !foundHookable)
         {
             context.TransitionTo((int)PlayerMovement.StateOptions.InAir);
             yield break;
         }
+
+
         GetContext<PlayerMovement>().hookData.UseHook();
 
         // Instantiate hook prefab
         hook = Instantiate(hookPrefab, transform.position + offset, Quaternion.identity, transform);
 
         // Stop player movement
-        GetContext<PlayerMovement>().rigidbody.velocity = Vector2.zero;
-        GetContext<PlayerMovement>().rigidbody.gravityScale = 0;
+        //GetContext<PlayerMovement>().rigidbody.velocity = Vector2.zero;
+        GetContext<PlayerMovement>().rigidbody.bodyType = RigidbodyType2D.Static;
 
         // Shoot hook
         float neededMagnitude = (hit.point - (Vector2)hook.transform.position).magnitude;
@@ -98,8 +111,8 @@ public class ShootingHookState : State
             if (breakableTags[i] == hit.transform.tag)
             {
                 Destroy(hit.transform.gameObject);
-                GetContext<PlayerMovement>().TransitionTo((int)PlayerMovement.StateOptions.InAir);
-                yield break;
+                //GetContext<PlayerMovement>().TransitionTo((int)PlayerMovement.StateOptions.InAir);
+                //yield break;
             }
         }
         GetContext<PlayerMovement>().TransitionTo((int)PlayerMovement.StateOptions.OnWall);

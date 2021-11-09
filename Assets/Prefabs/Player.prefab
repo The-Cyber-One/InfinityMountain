@@ -230,7 +230,9 @@ MonoBehaviour:
   shootableLayers:
     serializedVersion: 2
     m_Bits: 64
-  hookableTag: Hookable
+  hookableTags:
+  - Hookable
+  - Enemy
   breakableTags:
   - Enemy
 --- !u!114 &8527665373769308664
@@ -277,6 +279,7 @@ MonoBehaviour:
   upWallJumpDistance: 2
   sideWallJumpHeight: 2
   sideWallJumpDistance: 4
+  startSlidingTime: 0.3
 --- !u!114 &8527665373769308656
 MonoBehaviour:
   m_ObjectHideFlags: 0

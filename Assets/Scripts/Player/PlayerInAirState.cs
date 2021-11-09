@@ -8,7 +8,7 @@ public class PlayerInAirState : State
     public override void Enter()
     {
         GameEvents.InputedJump += ShootHook;
-        GetContext<PlayerMovement>().rigidbody.gravityScale = 1;
+        GetContext<PlayerMovement>().rigidbody.bodyType = RigidbodyType2D.Dynamic;
     }
 
     public override void Exit()
@@ -25,7 +25,7 @@ public class PlayerInAirState : State
 
     void ShootHook()
     {
-        if (GetContext<PlayerMovement>().hookData.CanShootHook())
+        if (GetContext<PlayerMovement>().hookData.CanShootHook() && GetContext<PlayerMovement>().playerInput.HookDirection != 0)
             context.TransitionTo((int)PlayerMovement.StateOptions.ShootingHook);
     }
 }
