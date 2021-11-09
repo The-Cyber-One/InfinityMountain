@@ -17,8 +17,7 @@ public class PlayerAnimation : MonoBehaviour
 
     [Header("Jump animation")]
     [SerializeField]
-    Sprite[] startJump,
-        upMovement, downMovement, landingJump;
+    Sprite[] startJump, upMovement, downMovement, landingJump;
 
     Coroutine setOnSlopeCoroutine;
 

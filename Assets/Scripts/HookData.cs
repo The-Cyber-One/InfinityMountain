@@ -24,6 +24,7 @@ public class HookData : MonoBehaviour
     public void UseHook()
     {
         if (CanShootHook()) AvailableHooks--;
+        GameEvents.AvailableHooksChanged?.Invoke(AvailableHooks);
     }
 
     public bool AddHook(int amount)

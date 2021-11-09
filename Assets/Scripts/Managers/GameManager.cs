@@ -41,11 +41,11 @@ public class GameManager : MonoBehaviour
         CheckpointDeathCounter++;
     }
 
-    public void LoadLevelAtCheckpoint(ButtonData data)
+    public void LoadLevelAtCheckpoint(int level, int checkpoint)
     {
-        SceneManager.LoadScene($"Level{data.level}");
-        nextCheckpoint = data.checkpoint;
-        if (data.checkpoint > 0)
+        SceneManager.LoadScene($"Level{level}");
+        nextCheckpoint = checkpoint;
+        if (checkpoint > 0)
             updateCheckpoint = true;
     }
 
