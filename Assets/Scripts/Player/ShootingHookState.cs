@@ -57,7 +57,7 @@ public class ShootingHookState : State
             }
         }
 
-        if (foundCollider || hookableTags.Length == 0)
+        if (!foundCollider || hookableTags.Length == 0)
         {
             context.TransitionTo((int)PlayerMovement.StateOptions.InAir);
             yield break;
