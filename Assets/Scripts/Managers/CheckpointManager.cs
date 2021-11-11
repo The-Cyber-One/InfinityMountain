@@ -7,7 +7,7 @@ public class CheckpointManager : MonoBehaviour
     public static CheckpointManager instance;
 
     Vector2 rawCheckpointPosition;
-    int activeCheckpoint;
+    public int ActiveCheckpoint { get; private set; }
 
     Dictionary<int, Checkpoint> checkpoints = new Dictionary<int, Checkpoint>();
 
@@ -27,7 +27,7 @@ public class CheckpointManager : MonoBehaviour
 
     public void ResetCheckpoint()
     {
-        activeCheckpoint = 0;
+        ActiveCheckpoint = 0;
         rawCheckpointPosition = Vector2.zero;
     }
 
@@ -39,11 +39,11 @@ public class CheckpointManager : MonoBehaviour
 
     public void SetCheckpoint(int checkpointNumber)
     {
-        if (checkpointNumber <= activeCheckpoint) return;
+        if (checkpointNumber <= ActiveCheckpoint) return;
 
         if (checkpoints.Count == 0) FindCheckpoints();
 
-        activeCheckpoint = checkpointNumber;
+        ActiveCheckpoint = checkpointNumber;
         Sprite sprite = checkpoints[checkpointNumber].GetComponent<SpriteRenderer>().sprite;
         rawCheckpointPosition = (Vector2)checkpoints[checkpointNumber].transform.position - (sprite.bounds.center.y + sprite.bounds.size.y / 2) * Vector2.up;
 

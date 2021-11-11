@@ -12,7 +12,7 @@ public class ShootingHookState : State
     [SerializeField]
     float maxShootDistance = 10f;
     [SerializeField]
-    LayerMask shootableLayers;
+    LayerMask[] shootableLayers;
     [SerializeField]
     [TagSelector]
     string[] hookableTags;
@@ -44,9 +44,20 @@ public class ShootingHookState : State
     {
         // Detect if hook can hit surface
         Vector3 offset = Vector3.right * (GetContext<PlayerMovement>().spriteRenderer.bounds.size.x / 2 * shootDirection);
-        RaycastHit2D hit = Physics2D.Raycast(transform.position + offset, shootDirection * Vector2.right, maxShootDistance, shootableLayers);
+        RaycastHit2D hit = new RaycastHit2D();
+        bool foundCollider = false;
+        foreach (LayerMask mask in shootableLayers)
+        {
+            hit = Physics2D.Raycast(transform.position + offset, shootDirection * Vector2.right, maxShootDistance, mask);
 
-        if (!hit.collider || hookableTags.Length == 0)
+            if (hit.collider)
+            {
+                foundCollider = true;
+                break;
+            }
+        }
+
+        if (foundCollider || hookableTags.Length == 0)
         {
             context.TransitionTo((int)PlayerMovement.StateOptions.InAir);
             yield break;

@@ -228,8 +228,10 @@ MonoBehaviour:
   speed: 50
   maxShootDistance: 10
   shootableLayers:
-    serializedVersion: 2
+  - serializedVersion: 2
     m_Bits: 64
+  - serializedVersion: 2
+    m_Bits: 128
   hookableTags:
   - Hookable
   - Enemy

@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         updateCheckpoint = true;
+        nextCheckpoint = CheckpointManager.instance.ActiveCheckpoint;
         CheckpointDeathCounter++;
     }
 
