@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
 
     int nextCheckpoint = 0;
     bool updateCheckpoint;
+    public int score;
 
     public void ResetDeaths()
     {
