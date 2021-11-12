@@ -13,6 +13,10 @@ public class IntroSequencer : MonoBehaviour
     }
 
     [SerializeField]
+    string nextSceneName;
+    [SerializeField]
+    bool useSceneName = false;
+    [SerializeField]
     TextCard[] textCards;
 
     void Start()
@@ -30,6 +34,7 @@ public class IntroSequencer : MonoBehaviour
             yield return new WaitForSecondsRealtime(textCard.time);
         }
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (useSceneName)SceneManager.LoadScene(nextSceneName);
+        else SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
