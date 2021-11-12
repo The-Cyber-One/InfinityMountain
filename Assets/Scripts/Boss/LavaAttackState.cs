@@ -10,8 +10,14 @@ class LavaAttackState : State
 
     public override void Enter()
     {
-        Transform[] transforms = new Transform[] { BottomLava, RightLava, LeftLava };
-        while (transforms.Length > 0) lavas.Enqueue(transforms[Random.Range(0, transforms.Length)]);
+        List<Transform> transforms = new List<Transform>() { BottomLava, RightLava, LeftLava };
+        while (transforms.Count > 0)
+        {
+            int index = Random.Range(0, transforms.Count);
+            lavas.Enqueue(transforms[index]);
+            transforms.RemoveAt(index);
+        }
+
         StartCoroutine(LavaMovement());
     }
 

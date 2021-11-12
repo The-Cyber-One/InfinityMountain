@@ -18,7 +18,7 @@ public class BossLavaMovement : MonoBehaviour
     {
         while (Vector3.Distance(transform.position, startPosition.position) > 0.1f)
         {
-            Vector3.Lerp(transform.position, startPosition.position, smoothing);
+            transform.position = Vector3.Lerp(transform.position, startPosition.position, smoothing);
             yield return null;
         }
 
@@ -26,7 +26,7 @@ public class BossLavaMovement : MonoBehaviour
 
         while (Vector3.Distance(transform.position, attackPosition.position) > 0.1f)
         {
-            Vector3.Lerp(transform.position, attackPosition.position, smoothing);
+            transform.position = Vector3.Lerp(transform.position, attackPosition.position, smoothing);
             yield return null;
         }
 
@@ -34,10 +34,17 @@ public class BossLavaMovement : MonoBehaviour
 
         while (Vector3.Distance(transform.position, endPosition.position) > 0.1f)
         {
-            Vector3.Lerp(transform.position, endPosition.position, smoothing);
+            transform.position = Vector3.Lerp(transform.position, endPosition.position, smoothing);
             yield return null;
         }
 
-        gameObject.SetActive(false);
+        transform.parent.gameObject.SetActive(false);
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!collision.CompareTag("Player")) return;
+
+        GameManager.instance.KillPlayer();
     }
 }

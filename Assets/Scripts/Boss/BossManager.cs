@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,10 @@ using UnityEngine;
 [RequireComponent(typeof(VulnerableState))]
 public class BossManager : StateMachine
 {
+    public int health;
+    [SerializeField]
+    int maxHealth = 3;
+
     public enum StateOptions
     {
         LavaAttack,
@@ -21,10 +26,14 @@ public class BossManager : StateMachine
         states.Add((int)StateOptions.Vulnerable, GetComponent<VulnerableState>());
 
         StateMachineSetup((int)StateOptions.LavaAttack);
+
+        health = maxHealth;
     }
+
 
     public void NextState()
     {
-
+        int state = UnityEngine.Random.Range(0, Enum.GetValues(typeof(StateOptions)).Length);
+        TransitionTo(state);
     }
 }

@@ -94,7 +94,5 @@ public class LavaMovement : MonoBehaviour
     void FixedUpdate()
     {
         if (!lavaIsMoving) return;
-
-
     }
 }
