@@ -24,11 +24,21 @@ public class GameManager : MonoBehaviour
         SceneManager.activeSceneChanged += SceneChanged;
     }
 
-    public int CheckpointDeathCounter { get; private set; }
+    public int score = 0;
 
+    public int CheckpointDeathCounter { get; private set; }
+    public string CurrentLevelTime
+    {
+        get
+        {
+            TimeSpan span = DateTime.Now - levelStartTime;
+            return $"{span.Hours.ToString("00")}:{span.Minutes.ToString("00")}:{span.Seconds.ToString("00")}";
+        }
+    }
+
+    DateTime levelStartTime;
     int nextCheckpoint = 0;
     bool updateCheckpoint;
-    public int score;
 
     public void ResetDeaths()
     {
@@ -68,6 +78,10 @@ public class GameManager : MonoBehaviour
             CheckpointManager.instance.SetCheckpoint(nextCheckpoint);
             CheckpointManager.instance.MoveToCheckpoint();
             updateCheckpoint = false;
+        }
+        if (next.name == "Level1" || next.name == "Level2")
+        {
+            levelStartTime = DateTime.Now;
         }
     }
 }

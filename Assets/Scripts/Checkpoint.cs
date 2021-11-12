@@ -17,6 +17,12 @@ public class Checkpoint : MonoBehaviour
     [SerializeField]
     Animator animator;
     [SerializeField]
+    AudioSource audioSource;
+    [SerializeField]
+    AudioClip audioclip;
+    [SerializeField]
+    GameObject textObject;
+    [SerializeField]
     [TagSelector]
     string playerTag;
     [SerializeField]
@@ -50,7 +56,18 @@ public class Checkpoint : MonoBehaviour
     {
         light.enabled = true;
         animator.enabled = true;
+        if (textObject != null) textObject.SetActive(true);
+        audioSource.Play();
+        StartCoroutine(WaitForAudio());
         if (finalCheckpoint) StartCoroutine(LevelCleared());
+    }
+
+    IEnumerator WaitForAudio()
+    {
+        yield return new WaitWhile(() => audioSource.isPlaying);
+        audioSource.clip = audioclip;
+        audioSource.loop = true;
+        audioSource.Play();
     }
 
     IEnumerator LevelCleared()
