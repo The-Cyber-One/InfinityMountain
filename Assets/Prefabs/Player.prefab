@@ -235,6 +235,7 @@ MonoBehaviour:
   hookableTags:
   - Hookable
   - Enemy
+  - Boss
   breakableTags: []
 --- !u!114 &8527665373769308664
 MonoBehaviour:

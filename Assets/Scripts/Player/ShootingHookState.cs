@@ -124,10 +124,19 @@ public class ShootingHookState : State
         if (hit.transform.CompareTag("Enemy"))
         {
             hit.transform.GetComponent<EnemyExplosion>().Explode();
+
             GetContext<PlayerMovement>().rigidbody.bodyType = RigidbodyType2D.Dynamic;
-            Debug.Log(GetContext<PlayerMovement>().rigidbody.velocity);
             GetContext<PlayerMovement>().rigidbody.velocity = new Vector2(shootDirection, 1) * hit.transform.GetComponent<EnemyExplosion>().explosionPower;
-            Debug.Log(GetContext<PlayerMovement>().rigidbody.velocity);
+
+            context.TransitionTo((int)PlayerMovement.StateOptions.InAir);
+            yield break;
+        }
+        else if (hit.transform.CompareTag("Boss"))
+        {
+            hit.transform.parent.GetComponent<VulnerableState>().HookHit();
+
+            GetContext<PlayerMovement>().rigidbody.bodyType = RigidbodyType2D.Dynamic;
+
             context.TransitionTo((int)PlayerMovement.StateOptions.InAir);
             yield break;
         }

@@ -19,6 +19,11 @@ public class StateMachine : MonoBehaviour
         TransitionTo(startStateId);
     }
 
+    public void StopCurrentState()
+    {
+        currentState.enabled = false;
+    }
+
     /// <summary>
     /// Change state and call the End and Start methods
     /// </summary>

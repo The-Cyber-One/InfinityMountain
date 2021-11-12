@@ -30,5 +30,7 @@ class CrystalAttackState : State
             Instantiate(crystalBall, new Vector2(Random.Range(collider.bounds.min.x, collider.bounds.max.x), Random.Range(collider.bounds.min.y, collider.bounds.max.y)), Quaternion.identity, null);
             yield return new WaitForSecondsRealtime(timeBetweenSpawns);
         }
+
+        GetContext<BossManager>().NextState();
     }
 }

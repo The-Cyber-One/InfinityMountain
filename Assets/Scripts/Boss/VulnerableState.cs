@@ -5,7 +5,7 @@ using UnityEngine;
 class VulnerableState : State
 {
     [SerializeField]
-    Transform vulnerablePosition, headPosition;
+    Transform head, vulnerablePosition, headPosition;
     [SerializeField]
     float smoothing = 0.1f, vulnerableTime = 3f;
     [SerializeField]
@@ -16,17 +16,17 @@ class VulnerableState : State
     public override void Enter()
     {
         movingBack = false;
-        StartCoroutine(MoveToStart());
         collider.enabled = true;
+        StartCoroutine(MoveToStart());
     }
 
     public override void Exit() { }
 
     IEnumerator MoveToStart()
     {
-        while (Vector3.Distance(transform.position, vulnerablePosition.position) > 0.1f)
+        while (Vector3.Distance(head.position, vulnerablePosition.position) > 0.1f)
         {
-            transform.position = Vector3.Lerp(transform.position, headPosition.position, smoothing);
+            head.position = Vector3.Lerp(head.position, vulnerablePosition.position, smoothing);
             yield return null;
         }
 
@@ -47,9 +47,9 @@ class VulnerableState : State
         movingBack = true;
         collider.enabled = false;
 
-        while (Vector3.Distance(transform.position, headPosition.position) > 0.1f)
+        while (Vector3.Distance(head.position, headPosition.position) > 0.1f)
         {
-            transform.position = Vector3.Lerp(transform.position, headPosition.position, smoothing);
+            head.position = Vector3.Lerp(head.position, headPosition.position, smoothing);
             yield return null;
         }
 
