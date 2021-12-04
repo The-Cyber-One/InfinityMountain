@@ -43,7 +43,7 @@ public class ShootingHookState : State
     IEnumerator HookMovement(float shootDirection)
     {
         // Detect if hook can hit surface
-        Vector3 offset = Vector3.right * (GetContext<PlayerMovement>().spriteRenderer.bounds.size.x / 2 * shootDirection);
+        Vector3 offset = Vector3.right * (GetContext<PlayerMovement>().collider.bounds.size.x / 2 * shootDirection);
         RaycastHit2D hit = new RaycastHit2D();
         bool foundCollider = false;
         foreach (LayerMask mask in shootableLayers)

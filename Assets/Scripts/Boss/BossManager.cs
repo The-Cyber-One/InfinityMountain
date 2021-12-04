@@ -17,6 +17,8 @@ public class BossManager : StateMachine
     ParticleSystem particleSystem;
     [SerializeField]
     float deathParticleTime = 2f, transitionDelay = 0.5f;
+    [SerializeField]
+    OnTrigger2DEvent onTrigger;
 
     public enum StateOptions
     {
@@ -31,10 +33,28 @@ public class BossManager : StateMachine
         states.Add((int)StateOptions.CrystalAttack, GetComponent<CrystalAttackState>());
         states.Add((int)StateOptions.Vulnerable, GetComponent<VulnerableState>());
 
-        StateMachineSetup((int)StateOptions.LavaAttack);
-
         health = maxHealth;
     }
+
+    private void OnEnable()
+    {
+        onTrigger.onTriggerEnter2D += StartBoss;
+    }
+
+    private void OnDisable()
+    {
+        onTrigger.onTriggerEnter2D -= StartBoss;
+    }
+
+    void StartBoss(Collider2D other)
+    {
+        if (!other.CompareTag("Player")) return;
+
+        onTrigger.onTriggerEnter2D -= StartBoss;
+
+        StateMachineSetup((int)StateOptions.LavaAttack);
+    }
+
 
     void Update()
     {

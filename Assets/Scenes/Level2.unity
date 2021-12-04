@@ -60366,6 +60366,7 @@ MonoBehaviour:
   particleSystem: {fileID: 2076466318}
   deathParticleTime: 2
   transitionDelay: 0.5
+  onTrigger: {fileID: 1172849255}
 --- !u!114 &791680369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60957,7 +60958,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1172849253}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 67, z: 0}
+  m_LocalPosition: {x: 0, y: -4, z: 0}
   m_LocalScale: {x: 16, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 791680367}
@@ -67108,6 +67109,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8527665373769308656, guid: efdd7d12beca0454ca8f2cfd427b7325, type: 3}
+      propertyPath: startingHooks
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8527665373769308658, guid: efdd7d12beca0454ca8f2cfd427b7325, type: 3}
       propertyPath: m_Name
       value: Player (1)
