@@ -86,6 +86,39 @@ TextureImporter:
   - first:
       213: 1700739261943856754
     second: Blue crystal_27
+  - first:
+      213: 2785821676984397043
+    second: Blue crystal_28
+  - first:
+      213: 6806211099188170189
+    second: Blue crystal_29
+  - first:
+      213: 7340250138654520743
+    second: Blue crystal_30
+  - first:
+      213: -7196101338948197564
+    second: Blue crystal_31
+  - first:
+      213: 8696953665399444362
+    second: Blue crystal_32
+  - first:
+      213: -2260039874106647415
+    second: Blue crystal_33
+  - first:
+      213: 8160439205219248608
+    second: Blue crystal_34
+  - first:
+      213: -4356133957733403268
+    second: Blue crystal_35
+  - first:
+      213: -3803986252778979409
+    second: Blue crystal_36
+  - first:
+      213: 9014966970560133482
+    second: Blue crystal_37
+  - first:
+      213: 7527451175964553542
+    second: Blue crystal_38
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -191,9 +224,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 15
-        height: 15
+        y: 100
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,10 +244,10 @@ TextureImporter:
       name: Blue crystal_1
       rect:
         serializedVersion: 2
-        x: 15
-        y: 0
-        width: 15
-        height: 15
+        x: 25
+        y: 100
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,10 +265,10 @@ TextureImporter:
       name: Blue crystal_2
       rect:
         serializedVersion: 2
-        x: 30
-        y: 0
-        width: 15
-        height: 15
+        x: 50
+        y: 100
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,10 +286,10 @@ TextureImporter:
       name: Blue crystal_3
       rect:
         serializedVersion: 2
-        x: 45
-        y: 0
-        width: 15
-        height: 15
+        x: 75
+        y: 100
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,10 +307,10 @@ TextureImporter:
       name: Blue crystal_4
       rect:
         serializedVersion: 2
-        x: 60
-        y: 0
-        width: 15
-        height: 15
+        x: 100
+        y: 100
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -295,10 +328,10 @@ TextureImporter:
       name: Blue crystal_5
       rect:
         serializedVersion: 2
-        x: 75
-        y: 0
-        width: 15
-        height: 15
+        x: 125
+        y: 100
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -316,10 +349,10 @@ TextureImporter:
       name: Blue crystal_6
       rect:
         serializedVersion: 2
-        x: 90
-        y: 0
-        width: 15
-        height: 15
+        x: 150
+        y: 100
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,10 +370,10 @@ TextureImporter:
       name: Blue crystal_7
       rect:
         serializedVersion: 2
-        x: 105
-        y: 0
-        width: 15
-        height: 15
+        x: 175
+        y: 100
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -358,10 +391,10 @@ TextureImporter:
       name: Blue crystal_8
       rect:
         serializedVersion: 2
-        x: 120
-        y: 0
-        width: 15
-        height: 15
+        x: 200
+        y: 100
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -379,10 +412,10 @@ TextureImporter:
       name: Blue crystal_9
       rect:
         serializedVersion: 2
-        x: 135
-        y: 0
-        width: 15
-        height: 15
+        x: 225
+        y: 100
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -400,10 +433,10 @@ TextureImporter:
       name: Blue crystal_10
       rect:
         serializedVersion: 2
-        x: 150
-        y: 0
-        width: 15
-        height: 15
+        x: 250
+        y: 100
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -421,10 +454,10 @@ TextureImporter:
       name: Blue crystal_11
       rect:
         serializedVersion: 2
-        x: 165
-        y: 0
-        width: 15
-        height: 15
+        x: 275
+        y: 100
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -442,10 +475,10 @@ TextureImporter:
       name: Blue crystal_12
       rect:
         serializedVersion: 2
-        x: 180
-        y: 0
-        width: 15
-        height: 15
+        x: 300
+        y: 100
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -463,10 +496,10 @@ TextureImporter:
       name: Blue crystal_13
       rect:
         serializedVersion: 2
-        x: 195
-        y: 0
-        width: 15
-        height: 15
+        x: 325
+        y: 100
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -484,10 +517,10 @@ TextureImporter:
       name: Blue crystal_14
       rect:
         serializedVersion: 2
-        x: 210
-        y: 0
-        width: 15
-        height: 15
+        x: 0
+        y: 75
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -505,10 +538,10 @@ TextureImporter:
       name: Blue crystal_15
       rect:
         serializedVersion: 2
-        x: 225
-        y: 0
-        width: 15
-        height: 15
+        x: 25
+        y: 75
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -526,10 +559,10 @@ TextureImporter:
       name: Blue crystal_16
       rect:
         serializedVersion: 2
-        x: 240
-        y: 0
-        width: 15
-        height: 15
+        x: 50
+        y: 75
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -547,10 +580,10 @@ TextureImporter:
       name: Blue crystal_17
       rect:
         serializedVersion: 2
-        x: 255
-        y: 0
-        width: 15
-        height: 15
+        x: 75
+        y: 75
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -568,10 +601,10 @@ TextureImporter:
       name: Blue crystal_18
       rect:
         serializedVersion: 2
-        x: 270
-        y: 0
-        width: 15
-        height: 15
+        x: 100
+        y: 75
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -589,10 +622,10 @@ TextureImporter:
       name: Blue crystal_19
       rect:
         serializedVersion: 2
-        x: 285
-        y: 0
-        width: 15
-        height: 15
+        x: 125
+        y: 75
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -610,10 +643,10 @@ TextureImporter:
       name: Blue crystal_20
       rect:
         serializedVersion: 2
-        x: 300
-        y: 0
-        width: 15
-        height: 15
+        x: 150
+        y: 75
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -631,10 +664,10 @@ TextureImporter:
       name: Blue crystal_21
       rect:
         serializedVersion: 2
-        x: 315
-        y: 0
-        width: 15
-        height: 15
+        x: 175
+        y: 75
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -652,10 +685,10 @@ TextureImporter:
       name: Blue crystal_22
       rect:
         serializedVersion: 2
-        x: 330
-        y: 0
-        width: 15
-        height: 15
+        x: 200
+        y: 75
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -673,10 +706,10 @@ TextureImporter:
       name: Blue crystal_23
       rect:
         serializedVersion: 2
-        x: 345
-        y: 0
-        width: 15
-        height: 15
+        x: 225
+        y: 75
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -694,10 +727,10 @@ TextureImporter:
       name: Blue crystal_24
       rect:
         serializedVersion: 2
-        x: 360
-        y: 0
-        width: 15
-        height: 15
+        x: 250
+        y: 75
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -715,10 +748,10 @@ TextureImporter:
       name: Blue crystal_25
       rect:
         serializedVersion: 2
-        x: 375
-        y: 0
-        width: 15
-        height: 15
+        x: 275
+        y: 75
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -736,10 +769,10 @@ TextureImporter:
       name: Blue crystal_26
       rect:
         serializedVersion: 2
-        x: 390
-        y: 0
-        width: 15
-        height: 15
+        x: 300
+        y: 75
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -757,10 +790,10 @@ TextureImporter:
       name: Blue crystal_27
       rect:
         serializedVersion: 2
-        x: 405
-        y: 0
-        width: 15
-        height: 15
+        x: 325
+        y: 75
+        width: 25
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -770,6 +803,237 @@ TextureImporter:
       bones: []
       spriteID: 27e39bb095d3a9710800000000000000
       internalID: 1700739261943856754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue crystal_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 50
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fcec382e0a39a620800000000000000
+      internalID: 2785821676984397043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue crystal_29
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 50
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcd8e611fe4847e50800000000000000
+      internalID: 6806211099188170189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue crystal_30
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 50
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a5b30d5c9ecdd560800000000000000
+      internalID: 7340250138654520743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue crystal_31
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 50
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 443a74475ff422c90800000000000000
+      internalID: -7196101338948197564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue crystal_32
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 50
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a835a2eb749c1b870800000000000000
+      internalID: 8696953665399444362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue crystal_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 25
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98c97ad65b9b2a0e0800000000000000
+      internalID: -2260039874106647415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue crystal_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e9a346a834bf3170800000000000000
+      internalID: 8160439205219248608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue crystal_35
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 0
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c75b847ce37eb83c0800000000000000
+      internalID: -4356133957733403268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue crystal_36
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fafb3a058a6853bc0800000000000000
+      internalID: -3803986252778979409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue crystal_37
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 0
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a69bd1642b89b1d70800000000000000
+      internalID: 9014966970560133482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue crystal_38
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 641b67f56f0e67860800000000000000
+      internalID: 7527451175964553542
       vertices: []
       indices: 
       edges: []

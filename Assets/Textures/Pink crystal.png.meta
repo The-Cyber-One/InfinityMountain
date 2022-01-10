@@ -86,6 +86,39 @@ TextureImporter:
   - first:
       213: 8479621751279111540
     second: Pink crystal_27
+  - first:
+      213: 2118055937171065976
+    second: Pink crystal_28
+  - first:
+      213: 4770587373981039899
+    second: Pink crystal_29
+  - first:
+      213: 4531144987482735251
+    second: Pink crystal_30
+  - first:
+      213: 3618460521964012266
+    second: Pink crystal_31
+  - first:
+      213: -7085958929626381670
+    second: Pink crystal_32
+  - first:
+      213: 300322852072258006
+    second: Pink crystal_33
+  - first:
+      213: -5130866686445725649
+    second: Pink crystal_34
+  - first:
+      213: -2068020035010781906
+    second: Pink crystal_35
+  - first:
+      213: 995055400040910271
+    second: Pink crystal_36
+  - first:
+      213: 5978833321568282071
+    second: Pink crystal_37
+  - first:
+      213: 3043075752723123943
+    second: Pink crystal_38
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -191,9 +224,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 15
-        height: 19
+        y: 116
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,10 +244,10 @@ TextureImporter:
       name: Pink crystal_1
       rect:
         serializedVersion: 2
-        x: 15
-        y: 0
-        width: 15
-        height: 19
+        x: 29
+        y: 116
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,10 +265,10 @@ TextureImporter:
       name: Pink crystal_2
       rect:
         serializedVersion: 2
-        x: 30
-        y: 0
-        width: 15
-        height: 19
+        x: 58
+        y: 116
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,10 +286,10 @@ TextureImporter:
       name: Pink crystal_3
       rect:
         serializedVersion: 2
-        x: 45
-        y: 0
-        width: 15
-        height: 19
+        x: 87
+        y: 116
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,10 +307,10 @@ TextureImporter:
       name: Pink crystal_4
       rect:
         serializedVersion: 2
-        x: 60
-        y: 0
-        width: 15
-        height: 19
+        x: 116
+        y: 116
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -295,10 +328,10 @@ TextureImporter:
       name: Pink crystal_5
       rect:
         serializedVersion: 2
-        x: 75
-        y: 0
-        width: 15
-        height: 19
+        x: 145
+        y: 116
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -316,10 +349,10 @@ TextureImporter:
       name: Pink crystal_6
       rect:
         serializedVersion: 2
-        x: 90
-        y: 0
-        width: 15
-        height: 19
+        x: 174
+        y: 116
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,10 +370,10 @@ TextureImporter:
       name: Pink crystal_7
       rect:
         serializedVersion: 2
-        x: 105
-        y: 0
-        width: 15
-        height: 19
+        x: 203
+        y: 116
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -358,10 +391,10 @@ TextureImporter:
       name: Pink crystal_8
       rect:
         serializedVersion: 2
-        x: 120
-        y: 0
-        width: 15
-        height: 19
+        x: 232
+        y: 116
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -379,10 +412,10 @@ TextureImporter:
       name: Pink crystal_9
       rect:
         serializedVersion: 2
-        x: 135
-        y: 0
-        width: 15
-        height: 19
+        x: 261
+        y: 116
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -400,10 +433,10 @@ TextureImporter:
       name: Pink crystal_10
       rect:
         serializedVersion: 2
-        x: 150
-        y: 0
-        width: 15
-        height: 19
+        x: 290
+        y: 116
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -421,10 +454,10 @@ TextureImporter:
       name: Pink crystal_11
       rect:
         serializedVersion: 2
-        x: 165
-        y: 0
-        width: 15
-        height: 19
+        x: 319
+        y: 116
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -442,10 +475,10 @@ TextureImporter:
       name: Pink crystal_12
       rect:
         serializedVersion: 2
-        x: 180
-        y: 0
-        width: 15
-        height: 19
+        x: 348
+        y: 116
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -463,10 +496,10 @@ TextureImporter:
       name: Pink crystal_13
       rect:
         serializedVersion: 2
-        x: 195
-        y: 0
-        width: 15
-        height: 19
+        x: 377
+        y: 116
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -484,10 +517,10 @@ TextureImporter:
       name: Pink crystal_14
       rect:
         serializedVersion: 2
-        x: 210
-        y: 0
-        width: 15
-        height: 19
+        x: 0
+        y: 87
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -505,10 +538,10 @@ TextureImporter:
       name: Pink crystal_15
       rect:
         serializedVersion: 2
-        x: 225
-        y: 0
-        width: 15
-        height: 19
+        x: 29
+        y: 87
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -526,10 +559,10 @@ TextureImporter:
       name: Pink crystal_16
       rect:
         serializedVersion: 2
-        x: 240
-        y: 0
-        width: 15
-        height: 19
+        x: 58
+        y: 87
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -547,10 +580,10 @@ TextureImporter:
       name: Pink crystal_17
       rect:
         serializedVersion: 2
-        x: 255
-        y: 0
-        width: 15
-        height: 19
+        x: 87
+        y: 87
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -568,10 +601,10 @@ TextureImporter:
       name: Pink crystal_18
       rect:
         serializedVersion: 2
-        x: 270
-        y: 0
-        width: 15
-        height: 19
+        x: 116
+        y: 87
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -589,10 +622,10 @@ TextureImporter:
       name: Pink crystal_19
       rect:
         serializedVersion: 2
-        x: 285
-        y: 0
-        width: 15
-        height: 19
+        x: 145
+        y: 87
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -610,10 +643,10 @@ TextureImporter:
       name: Pink crystal_20
       rect:
         serializedVersion: 2
-        x: 300
-        y: 0
-        width: 15
-        height: 19
+        x: 174
+        y: 87
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -631,10 +664,10 @@ TextureImporter:
       name: Pink crystal_21
       rect:
         serializedVersion: 2
-        x: 315
-        y: 0
-        width: 15
-        height: 19
+        x: 203
+        y: 87
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -652,10 +685,10 @@ TextureImporter:
       name: Pink crystal_22
       rect:
         serializedVersion: 2
-        x: 330
-        y: 0
-        width: 15
-        height: 19
+        x: 232
+        y: 87
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -673,10 +706,10 @@ TextureImporter:
       name: Pink crystal_23
       rect:
         serializedVersion: 2
-        x: 345
-        y: 0
-        width: 15
-        height: 19
+        x: 261
+        y: 87
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -694,10 +727,10 @@ TextureImporter:
       name: Pink crystal_24
       rect:
         serializedVersion: 2
-        x: 360
-        y: 0
-        width: 15
-        height: 19
+        x: 290
+        y: 87
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -715,10 +748,10 @@ TextureImporter:
       name: Pink crystal_25
       rect:
         serializedVersion: 2
-        x: 375
-        y: 0
-        width: 15
-        height: 19
+        x: 319
+        y: 87
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -736,10 +769,10 @@ TextureImporter:
       name: Pink crystal_26
       rect:
         serializedVersion: 2
-        x: 390
-        y: 0
-        width: 15
-        height: 19
+        x: 348
+        y: 87
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -757,10 +790,10 @@ TextureImporter:
       name: Pink crystal_27
       rect:
         serializedVersion: 2
-        x: 405
-        y: 0
-        width: 15
-        height: 19
+        x: 377
+        y: 87
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -770,6 +803,237 @@ TextureImporter:
       bones: []
       spriteID: 47dcaaa4e0bada570800000000000000
       internalID: 8479621751279111540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pink crystal_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 58
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87c0d7527a8d46d10800000000000000
+      internalID: 2118055937171065976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pink crystal_29
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 58
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1d7a14e0f7843240800000000000000
+      internalID: 4770587373981039899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pink crystal_30
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 58
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39243bceb5cd1ee30800000000000000
+      internalID: 4531144987482735251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pink crystal_31
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 58
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae2807d5caa573230800000000000000
+      internalID: 3618460521964012266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pink crystal_32
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 58
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a92cc9285ed99ad90800000000000000
+      internalID: -7085958929626381670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pink crystal_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 29
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d9f2b3fa06fa2400800000000000000
+      internalID: 300322852072258006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pink crystal_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f285484eeef7bc8b0800000000000000
+      internalID: -5130866686445725649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pink crystal_35
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 0
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2d9ac82cbaec43e0800000000000000
+      internalID: -2068020035010781906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pink crystal_36
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 0
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbdc5434d952fcd00800000000000000
+      internalID: 995055400040910271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pink crystal_37
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 0
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d5a85f8a3519f250800000000000000
+      internalID: 5978833321568282071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pink crystal_38
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 0
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ee8aa1364d2b3a20800000000000000
+      internalID: 3043075752723123943
       vertices: []
       indices: 
       edges: []

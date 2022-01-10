@@ -86,6 +86,102 @@ TextureImporter:
   - first:
       213: 7667663879399165353
     second: Green crystal_27
+  - first:
+      213: 5751587475834356247
+    second: Green crystal_28
+  - first:
+      213: 7373467438073224102
+    second: Green crystal_29
+  - first:
+      213: -5930696675303174999
+    second: Green crystal_30
+  - first:
+      213: -8716835307101619656
+    second: Green crystal_31
+  - first:
+      213: -8539931289276972694
+    second: Green crystal_32
+  - first:
+      213: 4832884913360971240
+    second: Green crystal_33
+  - first:
+      213: -1659223068088848842
+    second: Green crystal_34
+  - first:
+      213: -1552595330527333703
+    second: Green crystal_35
+  - first:
+      213: -4186251814127287971
+    second: Green crystal_36
+  - first:
+      213: -5607080187139899575
+    second: Green crystal_37
+  - first:
+      213: 1413448578296184968
+    second: Green crystal_38
+  - first:
+      213: 6242206441534015920
+    second: Green crystal_39
+  - first:
+      213: -1050898101366432875
+    second: Green crystal_40
+  - first:
+      213: 1853402481222604138
+    second: Green crystal_41
+  - first:
+      213: 5460508771069980093
+    second: Green crystal_42
+  - first:
+      213: 8683749950973042311
+    second: Green crystal_43
+  - first:
+      213: -2181525435428990048
+    second: Green crystal_44
+  - first:
+      213: 3771753459268639467
+    second: Green crystal_45
+  - first:
+      213: -3181902625554006378
+    second: Green crystal_46
+  - first:
+      213: 1366203140028365623
+    second: Green crystal_47
+  - first:
+      213: -8932537946452595132
+    second: Green crystal_48
+  - first:
+      213: 1783871962197245958
+    second: Green crystal_49
+  - first:
+      213: -7450513310274049030
+    second: Green crystal_50
+  - first:
+      213: -4170652944919180197
+    second: Green crystal_51
+  - first:
+      213: 4309126690012560976
+    second: Green crystal_52
+  - first:
+      213: 6669810090850385272
+    second: Green crystal_53
+  - first:
+      213: 5730578192022351668
+    second: Green crystal_54
+  - first:
+      213: -3999805353727983057
+    second: Green crystal_55
+  - first:
+      213: -3781472509664565242
+    second: Green crystal_56
+  - first:
+      213: 3938363826524182748
+    second: Green crystal_57
+  - first:
+      213: -1422908784776717209
+    second: Green crystal_58
+  - first:
+      213: 70396951489801281
+    second: Green crystal_59
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -191,9 +287,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 15
-        height: 19
+        y: 116
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,10 +307,10 @@ TextureImporter:
       name: Green crystal_1
       rect:
         serializedVersion: 2
-        x: 15
-        y: 0
-        width: 15
-        height: 19
+        x: 29
+        y: 116
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,10 +328,10 @@ TextureImporter:
       name: Green crystal_2
       rect:
         serializedVersion: 2
-        x: 30
-        y: 0
-        width: 15
-        height: 19
+        x: 58
+        y: 116
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,10 +349,10 @@ TextureImporter:
       name: Green crystal_3
       rect:
         serializedVersion: 2
-        x: 45
-        y: 0
-        width: 15
-        height: 19
+        x: 87
+        y: 116
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,10 +370,10 @@ TextureImporter:
       name: Green crystal_4
       rect:
         serializedVersion: 2
-        x: 60
-        y: 0
-        width: 15
-        height: 19
+        x: 116
+        y: 116
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -295,10 +391,10 @@ TextureImporter:
       name: Green crystal_5
       rect:
         serializedVersion: 2
-        x: 75
-        y: 0
-        width: 15
-        height: 19
+        x: 145
+        y: 116
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -316,10 +412,10 @@ TextureImporter:
       name: Green crystal_6
       rect:
         serializedVersion: 2
-        x: 90
-        y: 0
-        width: 15
-        height: 19
+        x: 174
+        y: 116
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,10 +433,10 @@ TextureImporter:
       name: Green crystal_7
       rect:
         serializedVersion: 2
-        x: 105
-        y: 0
-        width: 15
-        height: 19
+        x: 203
+        y: 116
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -358,10 +454,10 @@ TextureImporter:
       name: Green crystal_8
       rect:
         serializedVersion: 2
-        x: 120
-        y: 0
-        width: 15
-        height: 19
+        x: 232
+        y: 116
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -379,10 +475,10 @@ TextureImporter:
       name: Green crystal_9
       rect:
         serializedVersion: 2
-        x: 135
-        y: 0
-        width: 15
-        height: 19
+        x: 261
+        y: 116
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -400,10 +496,10 @@ TextureImporter:
       name: Green crystal_10
       rect:
         serializedVersion: 2
-        x: 150
-        y: 0
-        width: 15
-        height: 19
+        x: 290
+        y: 116
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -421,10 +517,10 @@ TextureImporter:
       name: Green crystal_11
       rect:
         serializedVersion: 2
-        x: 165
-        y: 0
-        width: 15
-        height: 19
+        x: 319
+        y: 116
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -442,10 +538,10 @@ TextureImporter:
       name: Green crystal_12
       rect:
         serializedVersion: 2
-        x: 180
-        y: 0
-        width: 15
-        height: 19
+        x: 348
+        y: 116
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -463,10 +559,10 @@ TextureImporter:
       name: Green crystal_13
       rect:
         serializedVersion: 2
-        x: 195
-        y: 0
-        width: 15
-        height: 19
+        x: 377
+        y: 116
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -484,10 +580,10 @@ TextureImporter:
       name: Green crystal_14
       rect:
         serializedVersion: 2
-        x: 210
-        y: 0
-        width: 15
-        height: 19
+        x: 0
+        y: 87
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -505,10 +601,10 @@ TextureImporter:
       name: Green crystal_15
       rect:
         serializedVersion: 2
-        x: 225
-        y: 0
-        width: 15
-        height: 19
+        x: 29
+        y: 87
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -526,10 +622,10 @@ TextureImporter:
       name: Green crystal_16
       rect:
         serializedVersion: 2
-        x: 240
-        y: 0
-        width: 15
-        height: 19
+        x: 58
+        y: 87
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -547,10 +643,10 @@ TextureImporter:
       name: Green crystal_17
       rect:
         serializedVersion: 2
-        x: 255
-        y: 0
-        width: 15
-        height: 19
+        x: 87
+        y: 87
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -568,10 +664,10 @@ TextureImporter:
       name: Green crystal_18
       rect:
         serializedVersion: 2
-        x: 270
-        y: 0
-        width: 15
-        height: 19
+        x: 116
+        y: 87
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -589,10 +685,10 @@ TextureImporter:
       name: Green crystal_19
       rect:
         serializedVersion: 2
-        x: 285
-        y: 0
-        width: 15
-        height: 19
+        x: 145
+        y: 87
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -610,10 +706,10 @@ TextureImporter:
       name: Green crystal_20
       rect:
         serializedVersion: 2
-        x: 300
-        y: 0
-        width: 15
-        height: 19
+        x: 174
+        y: 87
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -631,10 +727,10 @@ TextureImporter:
       name: Green crystal_21
       rect:
         serializedVersion: 2
-        x: 315
-        y: 0
-        width: 15
-        height: 19
+        x: 203
+        y: 87
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -652,10 +748,10 @@ TextureImporter:
       name: Green crystal_22
       rect:
         serializedVersion: 2
-        x: 330
-        y: 0
-        width: 15
-        height: 19
+        x: 232
+        y: 87
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -673,10 +769,10 @@ TextureImporter:
       name: Green crystal_23
       rect:
         serializedVersion: 2
-        x: 345
-        y: 0
-        width: 15
-        height: 19
+        x: 261
+        y: 87
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -694,10 +790,10 @@ TextureImporter:
       name: Green crystal_24
       rect:
         serializedVersion: 2
-        x: 360
-        y: 0
-        width: 15
-        height: 19
+        x: 290
+        y: 87
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -715,10 +811,10 @@ TextureImporter:
       name: Green crystal_25
       rect:
         serializedVersion: 2
-        x: 375
-        y: 0
-        width: 15
-        height: 19
+        x: 319
+        y: 87
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -736,10 +832,10 @@ TextureImporter:
       name: Green crystal_26
       rect:
         serializedVersion: 2
-        x: 390
-        y: 0
-        width: 15
-        height: 19
+        x: 348
+        y: 87
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -757,10 +853,10 @@ TextureImporter:
       name: Green crystal_27
       rect:
         serializedVersion: 2
-        x: 405
-        y: 0
-        width: 15
-        height: 19
+        x: 377
+        y: 87
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -770,6 +866,237 @@ TextureImporter:
       bones: []
       spriteID: 9ad4eac5ca3096a60800000000000000
       internalID: 7667663879399165353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green crystal_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 58
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71241b7065eb1df40800000000000000
+      internalID: 5751587475834356247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green crystal_29
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 58
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ab93419191d35660800000000000000
+      internalID: 7373467438073224102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green crystal_30
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 58
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9acc6f5cbcee1bda0800000000000000
+      internalID: -5930696675303174999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green crystal_31
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 58
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83aff92d874970780800000000000000
+      internalID: -8716835307101619656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green crystal_32
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 58
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6107682db11c7980800000000000000
+      internalID: -8539931289276972694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green crystal_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 29
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e5a935193bd11340800000000000000
+      internalID: 4832884913360971240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green crystal_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63e2e67196149f8e0800000000000000
+      internalID: -1659223068088848842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green crystal_35
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 0
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b2fcfbd5c2147ae0800000000000000
+      internalID: -1552595330527333703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green crystal_36
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 0
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d51cb9e972277e5c0800000000000000
+      internalID: -4186251814127287971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green crystal_37
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 0
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94f35620746af22b0800000000000000
+      internalID: -5607080187139899575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green crystal_38
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 0
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88000a14ef39d9310800000000000000
+      internalID: 1413448578296184968
       vertices: []
       indices: 
       edges: []
